@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[categories: Python | 折腾来折腾去]]></title>
+  <link href="http://pikipity.github.com/blog/categories/python/atom.xml" rel="self"/>
+  <link href="http://pikipity.github.com/"/>
+  <updated>2013-01-30T00:00:00+08:00</updated>
+  <id>http://pikipity.github.com/</id>
+  <author>
+    <name><![CDATA[pikipity]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[youtube-dl GUI]]></title>
+    <link href="http://pikipity.github.com/blog/youtube-dl-gui.html"/>
+    <updated>2013-08-25T15:47:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/youtube-dl-gui</id>
+    <content type="html"><![CDATA[<p>经常在网上看到一些很好的视频想要保存下来，如果保存成书签的形式，每次打开都要重新加载一遍实在是太麻烦了，最好的当然是下载到电脑上，虽然自己找了许多在 Mac OS X 上下载视频的软件，但是其中的广告或是收费升级通知让我烦不胜烦。最后找到了这个软件 – <a href="http://rg3.github.io/youtube-dl/">youtube-dl</a>。用 Python 编写，本来是专门用于下载 YouTube 上的视频的，但是现在支持大部分的视频网站，经测试优酷和土豆都可以正常下载，唯一的缺点就是没有一个 GUI，每次都要打开终端输入一行代码，而且像我这种记忆渣每次都要查一遍它的参数列表，实在麻烦，但是又不忍放弃，于是决定自己为其写一个 GUI。</p>
+
+<p><a href="http://pikipity.github.io/youtube-dl-GUI/">这里是此 youtube-dl GUI 的项目主页</a>，安装及使用方法都可以找到。下面是软件截图，因为仅仅是为了使用方便，所以看上去和简陋，但是功能还是齐全的，下一步希望可以抽时间把 “Options” 做的更人性化一点。</p>
+
+<p><img src="https://lh3.googleusercontent.com/-rkDZUJACtqo/UhmniKahR7I/AAAAAAAABHM/iwtIZ9ZXXuo/s640/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-25%2520%25E4%25B8%258B%25E5%258D%25882.34.08.png" alt="下载中" /></p>
+
+<p><img src="https://lh3.googleusercontent.com/-ZNcrGbCx18M/UhmniTT8BYI/AAAAAAAABHQ/ig4RsA_k8OM/s640/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-25%2520%25E4%25B8%258B%25E5%258D%25882.34.31.png" alt="选择 Options" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[用 Pygame 编写的生命游戏]]></title>
+    <link href="http://pikipity.github.com/blog/the-game-of-life-using-pygame.html"/>
+    <updated>2013-07-27T19:58:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/the-game-of-life-using-pygame</id>
+    <content type="html"><![CDATA[<p><a href="http://pikipity.github.io/blog/the-game-of-life.html">之前用 Matlab 编写了一个生命游戏</a>，但是效率实在太低了，只要矩阵稍微大一点，我的小 MacBook Pro 就跑不动了，恰巧最近正在跟随 <a href="http://eyehere.net/2011/python-pygame-novice-professional-1/">“eyeHere”</a> 这样一个网站学习 <a href="http://www.pygame.org/news.html">Pygame</a>。<a href="http://www.pygame.org/news.html">Pygame</a> 是一个将 Python 语言和 <a href="http://zh.wikipedia.org/wiki/SDL">SDL</a> 结合的 Python 库。<a href="http://zh.wikipedia.org/wiki/SDL">SDL</a> 是一个跨平台开源的多媒体库，源代码用 C 语言写成，一般用于游戏、模拟器和多媒体播放器的开发，顺带一提，Linux 上很多游戏都是用 SDL 开发的，当年玩的<a href="http://zh.wikipedia.org/wiki/%E9%9F%A6%E8%AF%BA%E4%B9%8B%E6%88%98">《韦诺之战》</a>也使用它开发的，还有当年红极一时的<a href="http://zh.wikipedia.org/wiki/%E9%AD%94%E5%9F%9F%E5%B9%BB%E5%A2%83%E4%B9%8B%E6%B5%B4%E8%A1%80%E6%88%B0%E5%A0%B42004">《虚拟竞技场》</a>系列的 Linux 版本等等。</p>
+
+<p>Pygame 可以直接在<a href="http://www.pygame.org/download.shtml">官网上下载</a>到，无论是 Windows 版还是 Mac OS X 版都已经打好了包，安装什么的都很方便。</p>
+
+<p>我把我那个用 Matlab 编写的生命游戏，用 Python 重写之后，debug 的时候运行还不是很流畅，但是实际运行的时候，速度超级理想，以至于我最初设定的30的FPS都显得比较大了。用键盘操作，在暂停模式下可以用鼠标添加或是消除细胞，键盘键位如下：</p>
+
+<ul>
+  <li>b键：开始游戏</li>
+  <li>s键：暂停游戏（可以用鼠标添加或是消除细胞）</li>
+  <li>c键：更改大小（在暂停模式下更改。书写格式为：每行细胞数量,每列细胞数量，回车确定）</li>
+</ul>
+
+<p>有兴趣的可以到<a href="https://github.com/pikipity/Game_of_life_python.git">我的 Github </a>去看看，下面是截图：</p>
+
+<p><img src="https://lh3.googleusercontent.com/-xd-_uQQvtRk/UfOyj9m4UCI/AAAAAAAAA58/L1DBnX41zm0/s640/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-07-27%2520%25E4%25B8%258B%25E5%258D%25887.40.40.png" alt="暂停画面" /></p>
+
+<p><img src="https://lh6.googleusercontent.com/-PRk7O1VVdFs/UfOyjw0r3BI/AAAAAAAAA6A/Zba8eMWtklk/s640/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-07-27%2520%25E4%25B8%258B%25E5%258D%25887.40.54.png" alt="运行画面" /></p>
+
+<p><img src="https://lh6.googleusercontent.com/-_9-BV2hoBEs/UfOyj_Nr1EI/AAAAAAAAA54/p2WOY7we-9I/s576/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-07-27%2520%25E4%25B8%258B%25E5%258D%25887.41.28.png" alt="更改大小" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[一起调戏谷歌娘]]></title>
+    <link href="http://pikipity.github.com/blog/download-google-voice.html"/>
+    <updated>2013-06-06T15:23:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/download-google-voice</id>
+    <content type="html"><![CDATA[<p>最近发现谷歌娘的声音真的是好有爱啊，但是下载的时候太麻烦了。在<a href="https://translate.google.com.hk/?hl=en&amp;tab=wT">谷歌翻译</a>里，为了下载一段谷歌娘的声音，还需要打开开发者工具去找对应的 requirment ，麻烦死了。这种重复性工作还是交给软件自己来完成吧，于是写了这样一个软件，用来自动下载谷歌娘“甜美、可人”的声音。</p>
+
+<p>可以在 Windows, Linux, Mac OS X 上运行，对于 Linux 和 Mac OS X，直接在解压目录下打开终端，运行 <code>python ./main.py</code> 即可。Windows 用户也可以直接用 “setup.exe” 安装或是直接点击 “dist” 文件夹下面的 “main.exe” 直接运行程序。</p>
+
+<p>你可以到<a href="http://pikipity.github.io/Download-Google-Voice">这里</a>下载程序。下面是程序截图：</p>
+
+<p><img src="http://i1302.photobucket.com/albums/ag140/pikipity/5C4F5E555FEB71672013-06-064E0B534832532_zps2b24e890.png" border="0" alt="Download-Google-Voice for Mac" /></p>
+
+<p><img src="http://i1302.photobucket.com/albums/ag140/pikipity/5C4F5E555FEB71672013-06-064E0B534833026_zps8f4eb922.png" border="0" alt="Download-Google-Voice for Windows" /></p>
+
+<p>PS: 英文语音的谷歌娘变成大叔音了~~~~~  o(&gt;﹏&lt;)o  +_+  /(ㄒoㄒ)/</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[字符动画转化器]]></title>
+    <link href="http://pikipity.github.com/blog/video-to-txt.html"/>
+    <updated>2013-05-30T20:45:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/video-to-txt</id>
+    <content type="html"><![CDATA[<p>这是一个字符动画转化器，可以将普通视频转换成字符动画并播放。软件主页在<a href="http://pikipity.github.io/video-to-txt">这里</a>。图包在<a href="http://pan.baidu.com/share/link?shareid=552715&amp;uk=4080321956">这里</a>。</p>
+
+<embed height="452" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="http://static.hdslb.com/miniloader.swf" flashvars="aid=584094&amp;page=1" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" />
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA['今天晚上吃神马？' 基本完成]]></title>
+    <link href="http://pikipity.github.com/blog/what-to-eat-v1-dot-0-publish.html"/>
+    <updated>2013-05-22T11:00:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/what-to-eat-v1-dot-0-publish</id>
+    <content type="html"><![CDATA[<p>“今天晚上吃神马？” Version 1.0 完成。可以到<a href="http://pikipity.github.io/what-to-eat/">项目主页</a>下载。下载下来之后，源码、打包之后的程序都在其中，主程序在 “dist” 文件夹中，双击即可使用（注意路径中不要有中文）。</p>
+
+<p>Python 编写，Tkinter 做 GUI，预想中的功能都已经实现：</p>
+
+<ol>
+  <li>
+    <p>从 <a href="http://takeaway.happymacao.com/">take away Macao</a> 自动抓取餐厅信息，包括：</p>
+
+    <ol>
+      <li>餐厅名</li>
+      <li>电话</li>
+      <li>附注</li>
+      <li>营业时间</li>
+      <li>餐厅地址</li>
+      <li>菜单网址（点击，从浏览器直接打开）</li>
+    </ol>
+  </li>
+  <li>随机抽取一个餐厅</li>
+  <li>可以设置自己所在地区，根据所在地区抓取不同的餐厅</li>
+</ol>
+
+<p>下一步需要改善的地方：</p>
+
+<ol>
+  <li>找到一种能够释放内存的方法：连续多次点击之后，由于开启过多进程导致内存占用过大</li>
+  <li>找到一种抓取图片的好方法，直接抓取菜单并显示（不用打开浏览器了），抓取餐厅标志并显示</li>
+  <li>还要改善一下难看的界面</li>
+</ol>
+
+<p>难看的界面：</p>
+
+<p><img src="https://lh6.googleusercontent.com/-0LOtRStfxr0/UZwyBbsQVkI/AAAAAAAAA1M/PIMFjt78Kgc/s493/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-05-22%2520%25E4%25B8%258A%25E5%258D%258810.46.25.png" alt="主界面" /></p>
+
+<p><img src="https://lh5.googleusercontent.com/-a2Oi-gBpdlA/UZwyBUl35AI/AAAAAAAAA1U/fN6xmErUDyE/s495/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-05-22%2520%25E4%25B8%258A%25E5%258D%258810.47.07.png" alt="选定停手" /></p>
+
+<p><img src="https://lh3.googleusercontent.com/-NGCLPdiXNts/UZwyBt50H0I/AAAAAAAAA1Y/bnrhcwGZ9cQ/s594/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-05-22%2520%25E4%25B8%258A%25E5%258D%258810.47.30.png" alt="设定界面" /></p>
+
+<p><img src="https://lh3.googleusercontent.com/-41jnXgPFCN0/UZwyB5nHiJI/AAAAAAAAA1c/cNVfhZjztZ0/s571/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-05-22%2520%25E4%25B8%258A%25E5%258D%258810.47.42.png" alt="关于我" /></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[categories: IOS | 折腾来折腾去]]></title>
+  <link href="http://pikipity.github.com/blog/categories/ios/atom.xml" rel="self"/>
+  <link href="http://pikipity.github.com/"/>
+  <updated>2013-01-30T00:00:00+08:00</updated>
+  <id>http://pikipity.github.com/</id>
+  <author>
+    <name><![CDATA[pikipity]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[人人都是艺术家]]></title>
+    <link href="http://pikipity.github.com/blog/everyone-is-artister.html"/>
+    <updated>2013-05-14T13:54:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/everyone-is-artister</id>
+    <content type="html"><![CDATA[<p>如果你认为没有艺术细胞的普通人就画不出具有艺术气息的画作，那么你就大错特错了。在<a href="http://weavesilk.com/">Silk</a>上，你随便画几笔都能得到超级漂亮的画作，不仅有<a href="http://weavesilk.com/">网页版</a>，还有<a href="http://click.linksynergy.com/fs-bin/stat?id=1ld*hl4tNqs&amp;offerid=146261&amp;type=3&amp;subid=0&amp;tmpid=1826&amp;RD_PARM1=https%253A%252F%252Fitunes.apple.com%252Fus%252Fapp%252Fsilk-interactive-generative%252Fid436590129%253Fmt%253D8%2526uo%253D4%2526partnerId%253D30">iphone 和 ipad 版</a>。人人都是艺术家~~~~~~~</p>
+
+<p><img src="https://lh3.googleusercontent.com/-B0yMeLeEd6c/UZHRYsrHN3I/AAAAAAAAA0U/Xp25NucJdyY/s912/%25E4%25B8%258B%25E8%25BD%25BD.png" alt="别问我我画的是什么，因为我也不知道" /></p>
+
+<p><img src="https://lh6.googleusercontent.com/-pPl5gb14n-Q/UZHRY_Z9L8I/AAAAAAAAA0Y/y2_HQsSmRJ0/s912/%25E4%25B8%258B%25E8%25BD%25BD%2520%25281%2529.png" alt="本来想画朵花的" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[iOS 6.1.2 更新发布]]></title>
+    <link href="http://pikipity.github.com/blog/ios-updata.html"/>
+    <updated>2013-02-20T16:20:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/ios-updata</id>
+    <content type="html"><![CDATA[<p>苹果发布了 iOS 固件更新，修复了 Exchange 日历错误。更新描述如下：</p>
+
+<blockquote>
+  <p>修复了可能导致网络流量上升与电池电量下降的 Exchange 日历错误。</p>
+</blockquote>
+
+<p>与此同时，苹果还将 iTunes 更新至 v11.0.2 版。在视图显示中新增了作曲家视图的设置，并提高了访问大量播放列表时的响应速度。同时还修复了已购买的内容无法在资料库中显示的问题。</p>
+
+<p>此次更新覆盖包括 iPad 2/3/4、iPad mini、iPhone 3GS/4/4S/5、iPod touch 4G/5G 在内的多款 iOS 设备，果迷们可以通过 iOS 系统更新（设置-通用-系统更新）或 iTunes 升级到 iOS 6.1.2 最新固件。</p>
+
+<p>iOS 6.1.2 仍未封堵最新越狱工具所利用到的漏洞，越狱团队 evad3rs 已将 iOS 6.x 完美越狱工具 <a href="http://evasi0n.com/">Evasi0n</a> 更新至v1.4版以应对最新固件。</p>
+
+<p><img src="/images/post/ios-6.1.2.jpg" width="450pt" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[MyScript Calculator -- ipad上的手写计算器]]></title>
+    <link href="http://pikipity.github.com/blog/write-calculator.html"/>
+    <updated>2013-02-10T15:18:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/write-calculator</id>
+    <content type="html"><![CDATA[<p>找到一款ipad上的超级好用的手写计算器，支持加减乘除，乘方、指数、对数三角/反三角函数、括号/根号/分号等等都能识别和计算。不仅能算出很长很复杂的算式，甚至能解方程。o(≧v≦)o~~好棒。PP助手有下载。</p>
+
+<p><img src="/images/post/myscript_calculator.jpg" alt="MyScript Calculator" width="550pt" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Evasi0n更新至v1.2]]></title>
+    <link href="http://pikipity.github.com/blog/evasi0n-update.html"/>
+    <updated>2013-02-10T14:40:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/evasi0n-update</id>
+    <content type="html"><![CDATA[<p>越狱神器<a href="http://evasi0n.com/">Evasi0n</a>跟新到了v1.2。更新了将已越狱设备的“OTA升级”禁用，修复了时区问题……</p>
+
+<p>禁用“OTA升级”能防止您已越狱的设备在苹果放出新版固件后自动更新对越狱造成破坏。</p>
+
+<p>如果已经使用此前的<a href="http://evasi0n.com/">Evasi0n</a>工具对设备进行越狱，可以直接通过Cydia进行更新。而对于那些还没有越狱的用户来说，请下载<a href="http://evasi0n.com/">Evasi0n v1.2</a>并进行越狱。</p>
+
+<p><img src="/images/post/Evasi0nv1.2.png" width="650pt" /></p>
+]]></content>
+  </entry>
+  
+</feed>

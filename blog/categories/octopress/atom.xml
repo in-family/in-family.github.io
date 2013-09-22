@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[categories: Octopress | 折腾来折腾去]]></title>
+  <link href="http://pikipity.github.com/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://pikipity.github.com/"/>
+  <updated>2013-01-30T00:00:00+08:00</updated>
+  <id>http://pikipity.github.com/</id>
+  <author>
+    <name><![CDATA[pikipity]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[kramdown 语法文档翻译（二）]]></title>
+    <link href="http://pikipity.github.com/blog/kramdown-syntax-chinese-2.html"/>
+    <updated>2013-05-19T10:42:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/kramdown-syntax-chinese-2</id>
+    <content type="html"><![CDATA[<p>上接<a href="http://pikipity.github.io/blog/kramdown-syntax-chinese-1.html">kramdown 语法文档翻译（一）</a></p>
+
+<h3 id="section">段落</h3>
+
+<p>一个段落的第一行可以加入三个空格的缩进，其他行可以有任意数量的缩进，因为段落支持自动换行。但是需要补充的一点就是，当一个“定义列表行”出现的时候，一个段落会自动中断。</p>
+
+<p>你可以用一个或多个空行来区分两个连续的段落。需要注意的是源文件中的一个空行并不意味着在输出文件中也是一个空行（因为“懒语法”）！如果你希望在输出中有一个空行（就好像 <code>&lt;br/&gt;</code> 标签），你需要在一行结束加上至少两个空格或是两个斜线！注意，一个段落的最后一行不可以是空行，这种空行会被忽略。开头和结尾的空格不会被纳入段落文字中。</p>
+
+<p>下面给出的是一个段落效果的举例（<code>⋅</code>代表空格）：</p>
+
+<pre><code>This para line starts at the first column. However,
+⋅⋅⋅⋅⋅⋅the following lines can be indented any number of spaces/tabs.
+⋅⋅⋅The para continues here.
+
+⋅⋅This is another paragraph, not connected to the above one. But⋅⋅
+with a hard line break. \\
+And another one.
+</code></pre>
+
+<p>效果如下：</p>
+
+<p>This para line starts at the first column. However,
+      the following lines can be indented any number of spaces/tabs.
+   The para continues here.</p>
+
+<p>This is another paragraph, not connected to the above one. But<br />
+with a hard line break. <br />
+And another one.</p>
+
+<h3 id="section-1">标题</h3>
+
+<p>krandown支持 “Setex” 和 “atx” 格式的标题。所有形式都可以在一个独立的文件中使用</p>
+
+<ul>
+  <li>
+    <p>“Setext” 格式</p>
+
+    <p>“Setext” 格式必须以一行文字（标题文字）和一行只有等号（对于第一级标题）或者破折号（对于第二级标题）。标题文字可以在开头加入三个空格，但是开头和结尾的空格都不会被纳入标题文字中。等号和破折号的数量没有区分，一个就足够了，但是多个可能更好看。等号和破折号必须顶头开始。下面是一个例子：</p>
+
+    <pre><code>First level header
+==================
+  
+Second level header
+-----
+  
+   Other first level header
+=
+</code></pre>
+
+    <p>因为 “Setext” 的标题是在一个块级元素的开始，所以这意味着它们之前必须有空行。但是它们之后不需要有空行:</p>
+
+    <pre><code> This is a normal
+ paragraph.
+   
+ And a Header
+ ---------------
+ And a paragraph
+   
+ &gt; This is a blockquote.
+   
+ And a Header
+ ----------------
+</code></pre>
+
+    <p>但是为了文档的易读性最好在 “Setext” 标题的后面也用一个空行。</p>
+
+    <p>值得一提的是一种边缘情况：</p>
+
+    <pre><code> header
+ ---
+ para
+</code></pre>
+
+    <p>一般来说，”Setext” 标题比“横线规律”（后面将提到）考前</p>
+  </li>
+  <li>
+    <p>“atx” 格式</p>
+
+    <p>“atx” 格式的标题必须以一行以一个或多个井号字符开头然后跟标题文字的文字开始。在井号符号之前不允许有空格。井号的数量代表标题的级数：一个井号代表第一级标题，两个代表第二级标题，以此类推直到最多六个井号代表第六级标题。在标题文字之后你可以加入任意数量的井号。任何标题文字开头和结尾的空格都不会纳入到标题文字中。下面是一个举例：</p>
+
+    <pre><code># First level hearder
+  
+### Third level header ###
+  
+## Second level header #################
+</code></pre>
+
+    <p>下过如下：</p>
+
+    <h1 id="first-level-hearder">First level hearder</h1>
+
+    <h3 id="third-level-header">Third level header</h3>
+
+    <h2 id="second-level-header">Second level header</h2>
+  </li>
+  <li>
+    <p>表明标题 ID</p>
+
+    <p>kranmdown 支持一种非常好的方法来设置标题的 ID，这种方法来自于 <a href="http://michelf.com/projects/php-markdown/extra/">PHP Markdown Extra</a> 和 <a href="http://maruku.rubyforge.org/">Maruku</a>：如果你在标题后面跟一个左大括号（和标题文字至少以一个空格隔开）、一个井号、标题 ID 和 一个右大括号，那么就为一个标题设置了一个 ID。如果你在 “atx” 风格的标题后面跟有一个井号，那么标题 ID 必须跟在结尾的井号之后。下面是一个例子：</p>
+
+    <pre><code>Hello    {#id}
+-------
+  
+# Hello   {#id}
+  
+# Hello   {#id}
+</code></pre>
+  </li>
+</ul>
+
+<p>PS: 此项翻译工程即将变成有生之年系列了。。。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ kramdown 语法文档翻译（一）]]></title>
+    <link href="http://pikipity.github.com/blog/kramdown-syntax-chinese-1.html"/>
+    <updated>2013-02-23T17:14:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/kramdown-syntax-chinese-1</id>
+    <content type="html"><![CDATA[<p>这是 《kramdown Syntax》的中文翻译系列，英文、中文都不好，翻译过来为大家方便查询与学习，原文在<a href="http://kramdown.rubyforge.org/syntax.html#attribute-list-definitions">这里</a>。</p>
+
+<p><img src="/images/post/overview_kramdown.png" width="550pt" /></p>
+
+<p>kramdown 语法是基于 Markdown 语法建立并加入了一些其他 Markdown 扩展版本（例如，<a href="http://maruku.rubyforge.org/">Maruku</a>、<a href="http://michelf.com/projects/php-markdown/extra/">PHP Markdown Extra</a> 和 <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>）所具有的特性。不仅如此，它努力去提供一个包括明确规则的严格的语法，所以它不可能完全符合 Markdown 语法。尽管如此，大多数用 Markdown 编写的文档依然可以用 kramdown 很好地解析。下面所有和 Markdown 语法存在不一样的地方的 kranmdown 语法都用高亮指出了。</p>
+
+<p>下面是所有 kramdown 所支持元素的语法定义，同时还有告诉你 kramdown 通过一个可用的编译器转换之后你将得到什么样的文档。</p>
+
+<!--more-->
+
+<h2 id="section">源文件文本格式</h2>
+
+<p>一个 kramdown 文本可以支持多种编码格式，比如 ASCII、UTF-8 和 ISO-8859-1，并且会将他们转化为和你源文件同样的编码格式。</p>
+
+<p>文件包括两种元素：块级元素 (block-level elements) 和跨度级元素 (span-level elements)</p>
+
+<ul>
+  <li>块级元素定义了内容的主体部分，比如，哪块文字是一个段落，哪块是一个列表，哪块是一个引用文字等等</li>
+  <li>跨度级元素标记了一些小的文字块，比如，强调文字或是链接</li>
+</ul>
+
+<p>因此，跨度级元素只能出现在块级元素或是另一个跨度级元素之内。</p>
+
+<p>在对于块级元素的描述中，你会经常发现以“第一行”或是一个块级元素的某一行的“第一个字”作为参照的叫法。这种参照仅仅是相对于当前的缩进级别。因为有的块级元素中会出现一个新的缩进级别（例如，引用文字）。一个 kramdown 文件总是开始于以文本第一行为开始的默认缩进。</p>
+
+<h3 id="section-1">自动换行</h3>
+
+<p>一些轻量级的语法不能很好地在强制断行的换行环境中使用，例如，很多的 email 程序中。但是，kramdown 允许内容比如段落或是引用中使用强制断行的换行形式，比如行之间的中断。这个有时被称为“懒语法”，因为对于连续行来说，文本第一行的缩进或是行首标记并不需要。</p>
+
+<p>当下面条件满足时，块级元素的一行结束：</p>
+
+<ul>
+  <li>一个空行，一条具有 EOB 标记的行，一条空的内联属性列表或是文本结束</li>
+  <li>或是 HTML 块</li>
+</ul>
+
+<p>在 krandom 的文件中支持自动换行，但是还是有一些块级元素不支持强制断行：</p>
+
+<ul>
+  <li>标题: 因为标题一般只有一行，所以在大多数情况下没有问题。如果标题一行太长，你需要用 HTML 语法代替</li>
+  <li>独立的程序代码块：一个独立代码块的分界线不支持强制断行，因为在分界线之间的东西都被当做独立代码块的内容。</li>
+  <li>定义：每一个定义项必须出现在一个单独的行里面。强制断行将会引入一个新的定义项。</li>
+  <li>表格：因为 kramdown 表格的每一行代表表格的一行或是两个表格之间的分割，所以表格不可能支持强制断行</li>
+</ul>
+
+<p><strong>注意</strong>：并不是建议使用懒语法来书写 kramdown 文档。因为自动换行所提供的 kramdown 语法的灵活性会影响易读性，所以不应该使用。</p>
+
+<h3 id="tab-">Tab 的使用</h3>
+
+<p>krandown 定义 tab 是四个空格，当在在列表的行首空格使用 tab 的时候，这点非常重要。并且，tab 只可以在行首使用，不可以用来代替空格，否则结果不可预测。</p>
+
+<h3 id="section-2">自动和手动逃逸</h3>
+
+<p>根据输出的形式，有一些常用字符需要特别对待，比如，当将一个 kramdowmn 文档转化为 HTML 的时候，需要特别注意“&lt;”、“&gt;”和“&amp;”字符。为了放别对这些特殊字符的处理，它们会正确地自动根据输出方式逃逸。</p>
+
+<p>比如，你可以直接在 kramdown 文档中使用“&lt;”、“&gt;”和“&amp;”字符，而不必去考虑它们在 HTML 中的使用。并且，如果你以 HTML 语言的形式或是 HTML 标签的形式使用使用这些字符的话，结果一样是正确的。</p>
+
+<p>因为 kramdown 也是用了一些字符去标记文本，所以这里有一种方法去实现这种字符的逃逸，这样它们就是自己本来的意思了。这是使用反斜杠逃逸。比如，你可以类似这样来使用单引号：</p>
+
+<pre><code>This \`is not a code\` span!
+</code></pre>
+
+<p>下面是一个包含全部可以逃逸的字符的列表</p>
+
+<pre><code>\         反斜线
+.         点号
+*         星号
+_         下划线
++         加号
+-         减号
+=         等号
+`         撇号
+()[]{}&lt;&gt;  小、中、大括号、单书名号
+#         井号
+!         感叹号
+&lt;&lt;        双小于
+&gt;&gt;        双大于
+:         冒号
+|         单竖杠
+"         双引号
+'         单引号
+$         钱的符号
+</code></pre>
+
+<h3 id="section-3">块边界</h3>
+
+<p>一些块级元素必须以块边界来开始或是结束。这里有两种情况来使块边界发挥作用：</p>
+
+<ul>
+  <li>如果块级元素必须以块边界来开始，那么它必须是一个空行，一个 EOB 标记，或是一个断掉的 IAL 或者它就是第一个元素</li>
+  <li>如果块级元素必须以块边界结束，那么它必须跟一个空行，一个 EOB 标记，或是一个断掉的 IAL 或者它就是最后元素</li>
+</ul>
+
+<h2 id="section-4">结构元素</h2>
+
+<p>所有的结构元素都是块级元素，并且它们用来构成整个内容。它们可以标记很多文本，比如一个简单的段落，一段引用或是一个列表等</p>
+
+<h3 id="section-5">空行</h3>
+
+<p>在 kramdown 中，任何一行只包含空字符例如空格或是 tab 就被认为是一个空行。一个或是多个连续的空行被认为是一个空行。空行被用来分割块级元素和其他部分，所以没有语义上的意思。但是，这里还是有一些空行有寓意的情况：</p>
+
+<ul>
+  <li>在标题使用时</li>
+  <li>在代码块中使用时</li>
+  <li>在列表中使用时</li>
+  <li>在数学快中使用时</li>
+  <li>在用来做一些元素的块边界的时候</li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[用Octopress 和 Github 建立自己的 Blog]]></title>
+    <link href="http://pikipity.github.com/blog/octopress-and-github.html"/>
+    <updated>2013-02-22T08:44:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/octopress-and-github</id>
+    <content type="html"><![CDATA[<p>这个 Blog 就是在使用 Octopress 和 Github 建立起来的。基本思路如下，首先用 Markdown 语言迅速成文，然后由 Octopress 生成站点文件并上传到 Github，利用 Github 的 Pages 功能，就可以直接通过访问 Github 提供的二级域名访问到你的站点了。</p>
+
+<p><img src="/images/post/octopress.jpg" width="550pt" /></p>
+
+<!--more-->
+
+<h3 id="octopress">为什么用 Octopress</h3>
+
+<p>有很多人看到就会吐槽了，为什么不用 WordPress 呢？那么下面就做一下 Octopress 和 WordPress 的对比好了。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center">Octopress</th>
+      <th style="text-align: center">WordPress</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">使用的脚本语言</td>
+      <td style="text-align: center">Ruby</td>
+      <td style="text-align: center">PHP</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">生成网页</td>
+      <td style="text-align: center">静态网页</td>
+      <td style="text-align: center">动态网页</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">外挂、主题数量</td>
+      <td style="text-align: center">少</td>
+      <td style="text-align: center">多</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">速度</td>
+      <td style="text-align: center">快</td>
+      <td style="text-align: center">慢</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">易用性</td>
+      <td style="text-align: center">起点比较高</td>
+      <td style="text-align: center">简单</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>其实准确的说 Octopress 并不是只能生成静态网页，但是这里介绍的是 Octopress 和 Github 联合使用，由于 Github 并不是一个服务器代理商，Pages本身只是为简单的项目主页准备的，所以没有数据库，每次打开网页都是一个新生成的过程，所以只能支持静态网页。</p>
+
+<p>从上面的表格就可以看出两者各有优缺点，我选择 Octopress 的原因很简单：</p>
+
+<ol>
+  <li>需要折腾</li>
+  <li>可改动性大</li>
+  <li>markdown 语法直接成文，舒服</li>
+</ol>
+
+<p>但是由于 Octopress 本身刚起步，国内教程、论坛都少的可怜，所以大部分的学习只能去看外国的网站，或是直接去 Github 上拉别人的网页来研究。下面就是如何在自己的电脑上安装 Octopress 和利用 Github 来搭建 Blog 了。下面的安装和使用都以 Mac OS X 10.8 为基础，我想 Linux 应该也是差不多的，Windows 应该比较麻烦，请看<a href="http://yanping.me/cn/blog/2011/12/26/octopress-on-windows/">这里</a></p>
+
+<h3 id="section">前期准备</h3>
+
+<p>首先你要具备一点 *nix 命令行的知识和 html 语言的知识。下面提供三个网址可以先看一下：</p>
+
+<ul>
+  <li><a href="http://www.douban.com/note/75797151/">Mac 终端命令</a></li>
+  <li><a href="http://www.linuxguide.it/command_line/linux_commands_cn.html">Linux 终端命令</a></li>
+  <li><a href="http://www.w3schools.com/html/default.asp">html 语言教程</a></li>
+</ul>
+
+<p>接下来就要做一些 Octopress 安装前的准备工作了。由于 Octopress 需要 Ruby 1.9.2，运行</p>
+
+<pre><code>$ ruby -v
+</code></pre>
+
+<p>检查一下版本号是否正确，如果正确，就可以直接安装 Octopress 了，如果版本不对就还是按照下面的步骤走一遍吧。</p>
+
+<ol>
+  <li>安装 GCC。如果已经安装了 Xcode，就可以不必安装了，由于后面的安装会需要源文件编译，所以需要安装 GCC 来提供支持，可以到<a href="https://github.com/kennethreitz/osx-gcc-installer">这里</a>下载对应版本的 GCC 来安装</li>
+  <li>
+    <p>安装 Homebrew，Homebrew 是 Mac 上的一个包管理器，后面为了方便，将直接用 Homebrew 来完成 Git 安装。运行下面指令来安装</p>
+
+    <pre><code>	$ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+</code></pre>
+
+    <p>Homebrew 如何使用可以直接到<a href="http://mxcl.github.com/homebrew/">这里</a>来看，安装那些 Mac 本身没有的包还是很方便的。</p>
+  </li>
+  <li>
+    <p>安装 Git。运行下面命令来安装</p>
+
+    <pre><code> $ brew install git
+</code></pre>
+  </li>
+  <li>安装 RVM，RVM 是 Ruby 的一个版本管理器，为了方便安装，可以直接到<a href="http://jewelrybox.unfiniti.com/">这里</a>下载 具有 GUI 的版本，这个的安装过程就和 Mac 上的其他软件没有什么不同了。</li>
+  <li>
+    <p>安装 Ruby 1.9.2，绕了一大圈，终于到重点了。运行下面的两条命令安装</p>
+
+    <pre><code> $ rvm install 1.9.2
+ $ rvm 1.9.2 --default
+</code></pre>
+  </li>
+</ol>
+
+<h3 id="octopress-1">安装 Octopress</h3>
+
+<p>主角登场。</p>
+
+<p>先在终端移动到你准备存放 Octopress 的地方，用下面的命令</p>
+
+<pre><code>$ cd 你的路径
+</code></pre>
+
+<p>然后直接用 Git 将 Octopress 从 Github 上拖下来就可以了，用下面的命令</p>
+
+<pre><code>$ git clone git://github.com/jsw0528/octopress.git
+</code></pre>
+
+<p>OK，在你当前路径下应该会多出一个叫 octopress 的文件夹，里面的就是 octopress 的程序了，这就叫做轻量。</p>
+
+<p>还需要安装一些基本的套件，否则生成的东西实在没法看，运行下面命令安装相关套件</p>
+
+<pre><code>$ cd octopress
+$ bundle install
+</code></pre>
+
+<p>然后就是安装主题了，这里可以有三种选择（支线剧情 Flag，+_+）：</p>
+
+<ol>
+  <li>
+    <p>使用预设主题，预设主题本身其实已经挺不错了，但是万千世界千篇一律就没意思了，可以将默认主题做模板来修改出自己的主题，用下面的命令安装预设主题</p>
+
+    <pre><code> $ rake install
+</code></pre>
+  </li>
+  <li>
+    <p>直接使用别人的主题或是在别人的主题上稍作修改，这里推荐两款</p>
+
+    <ul>
+      <li>
+        <p>极简风格的 Slash，大家可以到其<a href="http://zespia.tw/Octopress-Theme-Slash/index_tw.html">主页</a>看效果，其实这个 Blog 的主题就是在 Slash 上修改出来的，安装使用下面命令：</p>
+
+        <pre><code>   $ git clone git://github.com/tommy351/Octopress-Theme-Slash.git .themes/slash
+   $ rake install['slash']
+</code></pre>
+      </li>
+      <li>
+        <p>由 <a href="https://github.com/eDoctor">eDoctor</a> 开发的主题，大家可以来 <a href="http://mrzhang.me/">MrZhang.me</a> 来看效果，主题名就叫 “blog”，安装方法如下</p>
+
+        <pre><code>  $ git submodule init
+  $ git submodule update
+  $ rake install['blog']
+</code></pre>
+      </li>
+      <li>
+        <p>如果你觉得别人的主题都太烂了，Come on，自己做一个吧</p>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<p>安装完主题，Octopress 就算是安装完了，不要松懈，一切才刚刚开始</p>
+
+<h3 id="github-">连接 Github 账号</h3>
+
+<ol>
+  <li>
+    <p>到<a href="https://github.com">这里</a>注册一个 Github 账户，创建一个新的 Repository，名称为 <code>你的帐号.github.com</code>。</p>
+  </li>
+  <li>
+    <p>修改 Octopress 安装目录下的 <code>source/CNAME</code></p>
+
+    <ul>
+      <li>如果你要使用自己的域名，就将<code>source/CNAME</code>修改成你自己的域名，然后将域名的 A Record 指向 IP：<code>207.97.227.245</code>就可以了</li>
+      <li>如果直接使用 Github 提供的二级域名，就直接删除 <code>source/CNAME</code> 文件   </li>
+    </ul>
+  </li>
+  <li>
+    <p>运行下面命令</p>
+
+    <pre><code> $ rake setup_github_pages
+</code></pre>
+
+    <p>会提示输入有读写权限的 Repository url，可以在你刚才新建的 Repository 里面找到，具体位置见图片</p>
+
+    <p><img src="/images/post/Repository_url.jpg" alt="Repository_url 在这里" width="550pt" /></p>
+  </li>
+</ol>
+
+<h3 id="octopress-2">配置 Octopress</h3>
+
+<p>一般只需要配置两个文件就可以了</p>
+
+<ol>
+  <li>配置 <code>_config.yml</code>：这个文件在你的安装目录下面，里面是你 Blog 的一些基本配置，比如名字、创建时间等等，懂英文的一般都懂了一条条是什么意思，需要注意的是冒号后面的一个空格不要漏掉，<a href="https://gist.github.com/pikipity/5010379">这里</a>是我的 <code>_config.yml</code>，大家可以参考参考。</li>
+  <li>配置 <code>Rakefile</code>：这是软件的配置，不明白是什么就不要乱动了，有时候当你写 post 的时候会发现自动生成的文件格式不适合你，你可以修改 <code>Rakefile</code> 中 <code>new_post_ext</code> 对应的内容。</li>
+</ol>
+
+<p>至此，Octopress 就算是安装配置完了，你可以用它来生成博文并发布了。Octopress 的命令可以用下面的方法查询</p>
+
+<pre><code>$ rake -T
+</code></pre>
+
+<p>命令不多，真正常用的就几个，下面列出来：</p>
+
+<ul>
+  <li><code>rake generate</code>：生成站点</li>
+  <li><code>rake deploy</code>：发布站点</li>
+  <li><code>rake den_deploy</code>：上面两条命令的结合</li>
+  <li><code>rake new_post[title]</code>：在 <code>source/_posts</code> 中生成一个新的 post</li>
+  <li><code>rake new_page[filename]</code>：在 <code>source/(filename)/index.markdown</code> 中生成一个新页面</li>
+  <li><code>rake preview</code>：预览站点，默认在浏览器打开 <code>localhost:4000</code> 就可以预览</li>
+</ul>
+]]></content>
+  </entry>
+  
+</feed>

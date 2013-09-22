@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[categories: Processing | 折腾来折腾去]]></title>
+  <link href="http://pikipity.github.com/blog/categories/processing/atom.xml" rel="self"/>
+  <link href="http://pikipity.github.com/"/>
+  <updated>2013-01-30T00:00:00+08:00</updated>
+  <id>http://pikipity.github.com/</id>
+  <author>
+    <name><![CDATA[pikipity]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[processing 练习作 -- 3D 色子]]></title>
+    <link href="http://pikipity.github.com/blog/processing-prectice-3d-dice.html"/>
+    <updated>2013-09-12T00:24:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/processing-prectice-3d-dice</id>
+    <content type="html"><![CDATA[<p>processing 的练习作 – 3D 色子，旨在练习 processing 的 3D 效果制作。点击鼠标可以抛掷色子。色子的图案没有使用额外的图片，全部使用 processing 直接绘制。源代码在<a href="https://github.com/pikipity/3D_Dice.git">这里</a>。由于不是专注于正方体自由旋转落体的模拟，左移在色子的运动上做的很简单：上升和下落都是一个匀加速直线运动，每次落地撞击损失一半的速度；旋转方面每次根据坐标轴随机选取一个旋转方向，旋转速度和位移成正比；没有考虑触地之后的运动。</p>
+
+<p><img src="https://lh4.googleusercontent.com/-Qzgu5jWc-zY/UjCcf32YpqI/AAAAAAAABI4/myK3RPH83x8/s512/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-09-12%2520%25E4%25B8%258A%25E5%258D%258812.33.52.png" alt="程序截图" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[LED 亮度控制 -- processing 练习作]]></title>
+    <link href="http://pikipity.github.com/blog/light-controller.html"/>
+    <updated>2013-09-08T20:52:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/light-controller</id>
+    <content type="html"><![CDATA[<p>又是一个自己制作的 processing 的练习作，旨在练习 processing 与 Arduino 的串口通信。使用 Processing 编写的可视化控制条，用户可以通过拉拽控制条来调整亮度的数值，通过串口将亮度输送给 Arduino，由 Arduino 实现 LED 灯亮度的调整。由于是很简单的控制，所以就没有考虑什么保护电阻之类的了，直接很简单将 LED 插在了开发板上。视频中就可以看出，当亮度 100% 的时候（也就是电压达到 5V 的时候），LED 会过亮，可能会损坏 LED。</p>
+
+<p>可以到<a href="https://github.com/pikipity/Light_Controller.git">这里</a>下载源码。</p>
+
+<p>程序截图：</p>
+
+<p><img src="https://lh6.googleusercontent.com/-IHYJhlfZPoc/UixyaVzcbYI/AAAAAAAABIM/jEakPgrxBqA/s800/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-09-08%2520%25E4%25B8%258B%25E5%258D%25888.03.49.png" alt="程序截图" /></p>
+
+<p>硬件连接：</p>
+
+<p><img src="https://lh6.googleusercontent.com/-agA7VbMa52g/UixyanVbgEI/AAAAAAAABIY/kfIqR_7uBRs/s640/%25E7%2585%25A7%25E7%2589%2587%252013-9-8%2520%25E4%25B8%258B%25E5%258D%25888%252001%252036.jpg" alt="硬件连接" /></p>
+
+<p>控制视频（没有任何处理直接传渣浪，果然画质惨不忍睹）：</p>
+
+<div><object id="ssss" width="480" height="370"><param name="allowScriptAccess" value="always" /><embed pluginspage="http://www.macromedia.com/go/getflashplayer" src="http://you.video.sina.com.cn/api/sinawebApi/outplayrefer.php/vid=114236415_3342829334_OBrgGio5CWXK+l1lHz2stqlF+6xCpv2xhGm3v1CsJwdaVgiYJMXNb9wG5CvVBstD9HoLHcwydP8i1R4rbKtd/s.swf" type="application/x-shockwave-flash" name="ssss" allowfullscreen="true" allowscriptaccess="always" width="480" height="370" /></object></div>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[processing 练习作 -- 小画板]]></title>
+    <link href="http://pikipity.github.com/blog/practice-for-processing.html"/>
+    <updated>2013-09-05T16:57:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/practice-for-processing</id>
+    <content type="html"><![CDATA[<p>在<a href="http://pikipity.github.io/blog/new-game-processing.html">这篇文章</a>中我简单介绍了用来编写视觉交互式软件的编程语言 <a href="https://processing.org/">processing</a>，这是我的一个练习作 – 一个简单的小画板，旨在练习 Processing 的基本命令和熟悉 Java 的语法。源代码可以到<a href="https://github.com/pikipity/Drawer.git">这里</a>下载。</p>
+
+<p>左侧选择工具，右侧选择画笔粗细和颜色。按”e”键结束当前工具输入（画直线、方框、圆形和不规则图形时有效）；按”r”键画布清零。</p>
+
+<p>截图：</p>
+
+<p><img src="https://lh6.googleusercontent.com/-CQpds8QLtt8/UihEwkBDmPI/AAAAAAAABH4/SeNgK7VRgr8/s640/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-09-05%2520%25E4%25B8%258B%25E5%258D%25884.43.37.png" alt="界面" /></p>
+
+<p>小问题：</p>
+
+<ol>
+  <li>没有保存功能。</li>
+  <li>颜色和画笔粗细比较单一。</li>
+  <li>在画直线、方框、圆形和不规则图形时没有预览功能，不方便。</li>
+</ol>
+
+<p>在编写过程中就会发现 processing 语言在功能上还是有一定的欠缺的，比如不能够抓取一部分界面进行重绘，换句话说就是没有“撤销”功能，但是如果仅仅想编写一个静态的交互界面已经绰绰有余了，无怪乎很多 Arduino 教学网站都推荐这个语言。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[新玩具 -- Processing]]></title>
+    <link href="http://pikipity.github.com/blog/new-game-processing.html"/>
+    <updated>2013-08-28T12:37:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/new-game-processing</id>
+    <content type="html"><![CDATA[<p><img src="https://lh5.googleusercontent.com/-YJlrgUSftcw/Uh2LCQCqpSI/AAAAAAAABHk/BrDYwd8hf_s/s180/180px-Processing_Logo_Clipped.svg.png" alt="Processing" /></p>
+
+<p>在看 Arduino 的资料的时候无意间找到了一个新玩具 – <a href="http://processing.org/">Processing</a>，专门用来开发视觉交互界面用的语言，基础语言是 Java，优点就和他官方网站介绍的一样：</p>
+
+<ul>
+  <li>开源，免费下载</li>
+  <li>支持多种输出方式，2D、3D 甚至 pdf</li>
+  <li>使用 OpenGL 作为 3D 的引擎</li>
+  <li>支持多种操作系统，Linux, OSX, Windows</li>
+  <li>网络上有众多的扩展库支持</li>
+  <li>大量的资料书籍（虽然都是英文的）</li>
+</ul>
+
+<p>我的第一反应是把它当做 Pygame 的替代品。相比 Pygame，Processing 的优点众多：</p>
+
+<ul>
+  <li>Java 语言本身的优点：Python 蛋疼的内存管理机制和速度问题现在让我越来越烦心了，Java 在这两点上要好得多。</li>
+  <li>
+    <p>安装方便：Pygame 毕竟是个民间自发的维护项目，更新缓慢，对于刚刚接触 Python 的新手来说安装的过程中就会遇到重重障碍。Processing 的安装则简单的多，而且更新迅速，各个平台的程序都已经打包好了，直接双击安装就可以了，而且自带 IDE（除了自动补全外其他你能想到的、没想到的功能都有了，界面也挺漂亮的），真的是扫除一切学习障碍，诚意满满。</p>
+
+    <p><img src="https://lh5.googleusercontent.com/-m44lymT_wQs/Uh2LCW7aRFI/AAAAAAAABHo/ONQpnwUPbig/s512/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-28%2520%25E4%25B8%258B%25E5%258D%25881.30.05.png" alt="自带 IDE 界面" /></p>
+  </li>
+  <li>语言更加人性化：Python 的语言已经很人性化了，而 Processing 的语言，尤其是默认变量的命名通过语意猜测就可以知道其代表什么了。命名方式也很统一（Python。。。谁用谁知道，我不吐槽了。）</li>
+  <li>事件管理更加轻松：相比 Pygame，Processing 简化了事件管理的部分。不再需要专门再编写代码来获得事件，在 Processing 中鼠标与键盘的事件都变成了一个个默认变量，直接使用这些默认变量就可以获得事件。</li>
+  <li>更多扩展库的支持：扩展库不仅数量多而且覆盖的范围很广，使得用 Processing 编写出来的视觉交互界面可以很容易的与其他硬件或软件进行交互，甚至很多特效都已经有库支持，只要直接调用就可以了，非常方便省力。</li>
+</ul>
+
+<p>当然，缺点也是有的，其并不适合编写游戏，毕竟此语言是为了开发交互式界面而发明的，对于游戏上的开发乏力还是可以理解的。</p>
+
+<p>总而言之，如果仅仅是想快速开发出一个简单的交互式界面，Processing 绝对是不二人选，但是要开发复杂的交互界面或者游戏的话，还是考虑直接用 Pygame 或是 更加基础的 C 或 C++ 吧。还有因为 Processing 的底层语言是 Java，所以对于我这种用惯了 Python 的人来说，换用 Java 是各种不习惯啊。。。（吐槽：为什么每一句后面都要加个分号啊，为什么还要大括号啊，为什么 for 循环这么麻烦啊。。。）</p>
+
+<p><a href="http://pan.baidu.com/share/link?shareid=1374351361&amp;uk=4080321956">入门教程推荐 – 《爱上 Processing》（专门用了讲解了如何将 Processing 与 Arduino 配合使用）</a></p>
+]]></content>
+  </entry>
+  
+</feed>

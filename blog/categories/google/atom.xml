@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[categories: Google | 折腾来折腾去]]></title>
+  <link href="http://pikipity.github.com/blog/categories/google/atom.xml" rel="self"/>
+  <link href="http://pikipity.github.com/"/>
+  <updated>2013-01-30T00:00:00+08:00</updated>
+  <id>http://pikipity.github.com/</id>
+  <author>
+    <name><![CDATA[pikipity]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[推荐一款游戏 Cube Slam]]></title>
+    <link href="http://pikipity.github.com/blog/cube-slam.html"/>
+    <updated>2013-08-13T00:01:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/cube-slam</id>
+    <content type="html"><![CDATA[<p><img src="https://lh4.googleusercontent.com/-idNKKzH2b_0/UgkIm7DLEPI/AAAAAAAABCI/XOPh1qkCafI/s800/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-13%2520%25E4%25B8%258A%25E5%258D%258812.03.25.png" alt="Cube Slam" /></p>
+
+<p>今天推荐一款游戏 – <a href="https://www.cubeslam.com">Cube Slam</a>，这款游戏来自于 <a href="http://www.chromeexperiments.com/">Chrome Experiment</a>，只可以使用 <a href="https://www.google.com/intl/zh-CN/chrome/browser/">Chrome 浏览器</a>才可以打开。这款游戏很简单，就是通过移动面前的挡板来阻挡滑块打中自己，开始会有一层保护膜保护自己，当保护膜被击中一次之后就消失了，场上还会随机出现各式各样的道具，比如加长你的挡板、场上出现大雾或是挡板发射假滑块干扰对方等等。这个游戏不仅可以和电脑（那只熊）对战，也可以邀请其他人对战，当你进入游戏的时候会随机分配一个地址给你，你只要把你的地址发送给对方你们两人就可以开始对抗了（我应该常在<a href="https://www.cubeslam.com/bdysis">这里</a>，来找我玩啊 :-D）。</p>
+
+<p>这款游戏不是基于 Flash 制作的（现在好像已经没有多少网页游戏还固守于 Flash 了吧），前段使用 WebGL 和 three.js 搭建产生出3D效果，后端用 Go 语言编写，这个游戏搭建在 Google APP 云端，所以不会在你的电脑上留下许许多多不必要的垃圾文件，同时实现速度流畅。你甚至可以直接打开 Chrome 中的“开发者工具”来浏览源码。更多有关游戏的技术，可以到<a href="https://www.cubeslam.com/tech">这里</a>看一看。</p>
+
+<p><img src="https://lh4.googleusercontent.com/-tgaNnaaGBG8/UgkIm77nS9I/AAAAAAAABCQ/RU1JxWdidQo/s800/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-13%2520%25E4%25B8%258A%25E5%258D%258812.03.32.png" alt="操作说明" /></p>
+
+<p><img src="https://lh6.googleusercontent.com/-2u8g95xSROQ/UgkInHfMuVI/AAAAAAAABCM/rCY_e3GAzJk/s800/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-13%2520%25E4%25B8%258A%25E5%258D%258812.03.48.png" alt="与“熊”对战" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Geek IQ Test]]></title>
+    <link href="http://pikipity.github.com/blog/youtube-geek-week.html"/>
+    <updated>2013-08-06T22:53:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/youtube-geek-week</id>
+    <content type="html"><![CDATA[<p>Youtube 上的 Geek Week 专题即将结束了（8月4号到10号），你去看上面各种各样视频了么？完全就是一场 Geek 盛宴的感觉，从动漫到最新科技，还是很爽的。专题页面在<a href="http://www.youtube.com/user/YouTube/featured">这里</a>。当然，Youtube 那群“疯子”们怎么可能放过这样一个炫耀自己技术，彩蛋自然不能少，具体是什么，请看<a href="http://www.guao.hk/posts/youtubes-geek-week-easter-egg.html">这里</a>。</p>
+
+<p>当然，如果你想看 Geek Week 的详细介绍，随便在 Google 上搜索一下就能得到一大堆的结果，毕竟是“宅”们的节日，网络上怎么能没有介绍。这里要介绍的是 Youtube 上一个很有意思的 “Geek IQ Test”，就是测试一下，你到底有多宅！</p>
+
+<p>游戏规则很简单，每次8道题目，每道题目3个选项，根据视频内容，选择选项，最后根据你答题情况评分。测试在<a href="https://geekweek-live.appspot.com/desktop-us">这里</a>。第一次，题目都是我会的，8道全对，得分如下</p>
+
+<p><img src="https://lh5.googleusercontent.com/-r-YqbpwnVGA/UgES2SzaqRI/AAAAAAAAA9E/MzWceydp9W4/s512/YouTube%2520Spotlight%2520Presents%2520Geek%2520Week%2520-%2520YouTube.jpg" alt="我的 Geek IQ Test 的第一次得分" /></p>
+
+<p>但是后来又试了几次，发现第一次完全是运气好，有几道还是很有难度的，甚至有的即使会，但是英文你也许就不知道怎么说了。多试几次就会发现，题目就是那么几道，下面发一下答案，没做之前不许偷看欧！！！</p>
+
+<!--more-->
+
+<p><br /></p>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<p><img src="https://lh4.googleusercontent.com/-CVGWY-Ez2W8/UgES26gfzzI/AAAAAAAAA9I/1p6OFYqb9SE/s769/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-06%2520%25E4%25B8%258B%25E5%258D%258810.07.15.png" alt="龙珠经典镜头！！答案是 9001" /></p>
+
+<p><img src="https://lh5.googleusercontent.com/-6KVmhjF-3iY/UgES2o-lrZI/AAAAAAAAA9A/t9Mfw09Edis/s770/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-06%2520%25E4%25B8%258B%25E5%258D%258810.07.20.png" alt="很明显，磁悬浮啦。答案是 Magnetic" /></p>
+
+<p><img src="https://lh4.googleusercontent.com/-aKuL7CrWVw4/UgES3cU9GxI/AAAAAAAAA9U/okwJriD4gu8/s766/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-06%2520%25E4%25B8%258B%25E5%258D%258810.07.26.png" alt="钻石=煤球 囧 答案是 Carbon" /></p>
+
+<p><a href="http://dragonage.wikia.com/wiki/Tallis"><img src="https://lh3.googleusercontent.com/-JQGmujYuiSg/UgES3ogfZoI/AAAAAAAAA9c/hxh3VRi0RMY/s768/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-06%2520%25E4%25B8%258B%25E5%258D%258810.07.31.png" alt="我的第一反应是劳拉，仔细看看，衣服怎么有袖子，劳拉性感小背心呢？这个真心不知道，查了一下，答案是 Tallis，是《龙腾世纪》中的一个人物，点图片看官网介绍" /></a></p>
+
+<p><img src="https://lh6.googleusercontent.com/-QrfljyGPxEY/UgES33zpQxI/AAAAAAAAA9k/0JreNQ_HnSk/s762/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-06%2520%25E4%25B8%258B%25E5%258D%258810.07.38.png" alt="没啥说的，答案是 Double slit" /></p>
+
+<p><img src="https://lh6.googleusercontent.com/-OtkDiEwEb0o/UgES4dKz7xI/AAAAAAAAA9s/JbCF49lgFxg/s768/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-06%2520%25E4%25B8%258B%25E5%258D%258810.07.42.png" alt="这是啥？？但是能让水看起来是这样的也只能是 Stroboscopic" /></p>
+
+<p><img src="https://lh4.googleusercontent.com/-mfnigwuOEJM/UgES41bff2I/AAAAAAAAA90/YbL3HlVKbRY/s766/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-06%2520%25E4%25B8%258B%25E5%258D%258810.07.49.png" alt="第一反应是找刺客 Assassin，但是发现三个都是人名！！这。。。前两代主角名字早就忘了好不好啊，第三代虽然各种意义上的“烂尾”，但是人名还是记得，于是选了 Connor，结果对了！" /></p>
+
+<p><a href="http://www.bbc.co.uk/doctorwho/s4/characters/"><img src="https://lh3.googleusercontent.com/-ErpYY4QX04o/UgES5KkhyOI/AAAAAAAAA-E/xP68u57zr-Y/s770/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-06%2520%25E4%25B8%258B%25E5%258D%258810.07.53.png" alt="别问我这是什么，我不看连续剧。点图片看答案" /></a></p>
+
+<p><img src="https://lh4.googleusercontent.com/-B7VoQQIBdkE/UgES5SmVemI/AAAAAAAAA-A/Ewx43eJLozA/s768/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-06%2520%25E4%25B8%258B%25E5%258D%258810.08.08.png" alt="好像和气体有关的神奇的事情都和 Bernoulli 有点关系" /></p>
+
+<p><img src="https://lh4.googleusercontent.com/-Nbbc9rldk_g/UgES51vHVyI/AAAAAAAAA-I/1zG3eiGj6XQ/s770/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-06%2520%25E4%25B8%258B%25E5%258D%258810.08.13.png" alt="突然间想起了掉进洞里的熊" /></p>
+
+<p><img src="https://lh5.googleusercontent.com/-R1NHuAbLa2s/UgES6KVznmI/AAAAAAAAA-U/RhZcelRR5RQ/s770/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-06%2520%25E4%25B8%258B%25E5%258D%258810.08.19.png" alt="别告诉我你不知道木星用英语怎么说，人家又没让你选这个。答案是 Largest" /></p>
+
+<p><img src="https://lh4.googleusercontent.com/-Ub7ZUhdltOI/UgES6a69RBI/AAAAAAAAA-Y/U1aqcrN8JGM/s766/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-06%2520%25E4%25B8%258B%25E5%258D%258810.08.30.png" alt="完全没有槽点，Vitruvian 你怎么看？" /></p>
+
+<p><img src="https://lh6.googleusercontent.com/-OEYg0P4SP6s/UgES6pzuotI/AAAAAAAAA-s/KjhDiiOfv6o/s768/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-06%2520%25E4%25B8%258B%25E5%258D%258810.08.34.png" alt="0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946，………………  费波那西数列" /></p>
+
+<p><img src="https://lh4.googleusercontent.com/-KozCqGmQwB0/UgES7W6Z2kI/AAAAAAAAA-k/8QRFHLzM5MA/s772/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-06%2520%25E4%25B8%258B%25E5%258D%258810.08.40.png" alt="你连这个都认不出来你还敢做这个测试？" /></p>
+
+<p><img src="https://lh3.googleusercontent.com/-SyiDdwb3Qag/UgES7QkAT6I/AAAAAAAAA-w/CBrVX4rLbJ8/s768/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-06%2520%25E4%25B8%258B%25E5%258D%258810.08.47.png" alt="#FF0000 更加没槽点了" /></p>
+
+<p><img src="https://lh5.googleusercontent.com/--GcZGbKaGyI/UgES8WS6T1I/AAAAAAAAA_A/CM_sPEoO5h8/s769/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-06%2520%25E4%25B8%258B%25E5%258D%258810.08.55.png" alt="Inertia 连续没槽点，怎么办啊" /></p>
+
+<p><img src="https://lh4.googleusercontent.com/-o5JV-4AGfz8/UgES8i9cAlI/AAAAAAAAA_I/tUgq9NYh0c4/s768/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-06%2520%25E4%25B8%258B%25E5%258D%258810.08.59.png" alt="后脑勺上印条形码的大光头，全世界也就一个吧! -- 杀手代号47" /></p>
+
+<p><img src="https://lh3.googleusercontent.com/-m0ghkNOyBh8/UgES8xR68BI/AAAAAAAAA_E/kUjbJNKI2OY/s768/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-06%2520%25E4%25B8%258B%25E5%258D%258810.09.05.png" alt="Hydrogen 继续无槽点" /></p>
+
+<p><img src="https://lh3.googleusercontent.com/-99stG95-p9w/UgES9egglYI/AAAAAAAAA_U/GZel8XyiyYI/s769/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-06%2520%25E4%25B8%258B%25E5%258D%258810.36.29.png" alt="Piranha plant? Pirhanna plant!" /></p>
+
+<p><a href="http://en.wikipedia.org/wiki/PAX6"><img src="https://lh5.googleusercontent.com/-l0vv-oydoJ8/UgES93OM25I/AAAAAAAAA_Y/k1mmtqG-Z7I/s770/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-06%2520%25E4%25B8%258B%25E5%258D%258810.37.20.png" alt="FRZ4 我记得是跟视力有关的 DNA，点击图片去维基（全英文，我没看，不知道我记忆中对不对，看了的告诉我）" /></a></p>
+
+<p><img src="https://lh4.googleusercontent.com/-p84keqCckj8/UgEZmQtlBJI/AAAAAAAAA_o/Qy_tkCvyPsc/s766/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-06%2520%25E4%25B8%258B%25E5%258D%258811.41.41.png" alt="一只黑猫孤独的背影，当然是薛定谔的胖次了（如果是白猫你想到了什么？化物语？）" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[体温发电手电筒]]></title>
+    <link href="http://pikipity.github.com/blog/2013gsf.html"/>
+    <updated>2013-07-19T19:10:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/2013gsf</id>
+    <content type="html"><![CDATA[<p>加拿大15岁女生利用热电效应，发明了这个只要用手攥着就可以发光的手电筒。这是2013年 <a href="https://www.googlesciencefair.com/zh-CN_ALL/2013/">“Google Science Fair”</a> 参赛作品。9月份，她将与其他14位选手到加州参加决赛，获胜者将参加国家地理远征，前往巴哥群岛10天，并获得5万美金奖学金。很遗憾，中国地区貌似没有人晋级（我怀疑是不是连参加的都没有啊）。</p>
+
+<p>热电效应是通过热电装置，当其两端存在温度差的时候，产生电压的现象。不同的金属导体（或半导体）具有不同的自由电子密度，当两种不同的金属导体相互接触时，在接触面上的电子就会扩散以消除电子密度的差异。而电子的扩散速率与接触区的温度成正比，所以只要维持两金属间的温差，就能使电子持续扩散，在两块金属的另两个端点形成稳定的电压。由此产生的电压通常每开尔文温差只有几微伏，这一效应被称为塞贝克效应。塞贝克效应通常应用于热电偶，用来直接测量温差，或者将金属的一端设定到已知温度来测另一端的温度。当几个温差电偶连接在一起时叫做热电堆，用来制造更大的电压。塞贝克效应还可以用来鉴定合金的成分：将未知金属和已知金属连接，并保持温度不变，根据测得的电压可以算出未知金属的塞贝克系数，从而判断它的材料。</p>
+
+<p>这个手电筒的手柄用铝管打造，中间空心，通过冷热空气自由交换降低内部温度。只要有5摄氏度的温差，就可以产生5.4mW的电压驱动手电筒中的LED灯发出亮光。</p>
+
+<p>这里是发明者对手电筒的介绍视频。</p>
+
+<iframe width="560" height="315" src="http://pikipity.github.com//www.youtube.com/embed/fRdeFcIK8QM?rel=0" frameborder="0" allowfullscreen=""></iframe>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[一起调戏谷歌娘]]></title>
+    <link href="http://pikipity.github.com/blog/download-google-voice.html"/>
+    <updated>2013-06-06T15:23:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/download-google-voice</id>
+    <content type="html"><![CDATA[<p>最近发现谷歌娘的声音真的是好有爱啊，但是下载的时候太麻烦了。在<a href="https://translate.google.com.hk/?hl=en&amp;tab=wT">谷歌翻译</a>里，为了下载一段谷歌娘的声音，还需要打开开发者工具去找对应的 requirment ，麻烦死了。这种重复性工作还是交给软件自己来完成吧，于是写了这样一个软件，用来自动下载谷歌娘“甜美、可人”的声音。</p>
+
+<p>可以在 Windows, Linux, Mac OS X 上运行，对于 Linux 和 Mac OS X，直接在解压目录下打开终端，运行 <code>python ./main.py</code> 即可。Windows 用户也可以直接用 “setup.exe” 安装或是直接点击 “dist” 文件夹下面的 “main.exe” 直接运行程序。</p>
+
+<p>你可以到<a href="http://pikipity.github.io/Download-Google-Voice">这里</a>下载程序。下面是程序截图：</p>
+
+<p><img src="http://i1302.photobucket.com/albums/ag140/pikipity/5C4F5E555FEB71672013-06-064E0B534832532_zps2b24e890.png" border="0" alt="Download-Google-Voice for Mac" /></p>
+
+<p><img src="http://i1302.photobucket.com/albums/ag140/pikipity/5C4F5E555FEB71672013-06-064E0B534833026_zps8f4eb922.png" border="0" alt="Download-Google-Voice for Windows" /></p>
+
+<p>PS: 英文语音的谷歌娘变成大叔音了~~~~~  o(&gt;﹏&lt;)o  +_+  /(ㄒoㄒ)/</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Google Maps = Google Earth ! -- 新谷歌地图体验]]></title>
+    <link href="http://pikipity.github.com/blog/new-google-map.html"/>
+    <updated>2013-05-24T12:52:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/new-google-map</id>
+    <content type="html"><![CDATA[<p><a href="http://pikipity.github.io/blog/google-i-slash-o-live.html">Google I/O 大会</a>上发布了新的谷歌地图，现在还是测试版，但是 Google 用户可以<a href="https://maps.google.com/help/maps/helloworld/desktop/preview/">申请体验新版的谷歌地图</a>，我于5月18日发出申请，今天终于收到邮件 “Welcome to the new Google Maps.”。好高兴啊，等不及了，赶快体验一下吧。</p>
+
+<p>初感觉，界面的流畅程度和美观程度都有了提高，这难道是我的错觉？</p>
+
+<p><img src="https://lh3.googleusercontent.com/-mvnxsZ-mi-Q/UZ78ahcKUpI/AAAAAAAAA2w/796I8Pa9kOw/s800/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-05-24%2520%25E4%25B8%258B%25E5%258D%258812.57.59.png" alt="新谷歌地图" /></p>
+
+<p><img src="https://lh3.googleusercontent.com/-mB1W9dbkKuw/UZ78Y8-1gNI/AAAAAAAAA2g/wYMbs9gfEgs/s800/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-05-24%2520%25E4%25B8%258B%25E5%258D%25881.32.25.png" alt="3大明显改变" /></p>
+
+<p>和旧版对比，有3大很明显的变化：</p>
+
+<ol>
+  <li>
+    <p>放大、缩小调节栏移动到了右下角，街景小人消失了，取而代之的是一个可以收缩的 “Explore” 栏，展开之后，会显示你当前地图显示区域的一些著名地区的街景，只要点击就可以到达那个地方的街景。</p>
+
+    <p><img src="https://lh6.googleusercontent.com/-eJbL_sb8M7I/UZ78QAar1sI/AAAAAAAAA18/6p7kKxXzA9U/s800/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-05-24%2520%25E4%25B8%258B%25E5%258D%25881.02.12.png" alt="可以收缩的 &quot;Explore&quot; 栏" /></p>
+
+    <p>或者在地图上任一点击一个地方，搜索条上都会出现 “Street View” 选项，点击就可以进入街景模式（把鼠标移上去街景所示的地方在地图上就会出现一个闪光黑点，很贴心）。</p>
+
+    <p><img src="https://lh5.googleusercontent.com/-bEFAq76cxBc/UZ78QEjaUdI/AAAAAAAAA14/UnMZuhp_n_w/s800/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-05-24%2520%25E4%25B8%258B%25E5%258D%25881.04.20.png" alt="搜索栏也可进入街景模式" /></p>
+
+    <p>进入街景模式之后右下角地图显示你现在的位置，点击即可返回地图模式。整个操作非常贴心，没有上手难度，而且衔接动画也很流畅。</p>
+
+    <p><img src="https://lh5.googleusercontent.com/-YKW-bAZyeNw/UZ78R50brvI/AAAAAAAAA2E/DnPXB7rrnRY/s800/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-05-24%2520%25E4%25B8%258B%25E5%258D%25881.03.17.png" alt="街景模式有小地图指示位置" /></p>
+  </li>
+  <li>
+    <p>大家一定注意到上图中在地图模式中左下角的 “Earth” 字样了。点击即可进入地球模式，从今往后，再也不用为了看看实体建筑去开启“谷歌地球”那个臃肿且没啥用处的软件了，在谷歌地图里一键切换，省心省力。</p>
+
+    <p><img src="https://lh6.googleusercontent.com/-Z2Ph3hpHAng/UZ78aqGRnfI/AAAAAAAAA20/YbWvJ1B6DkQ/s800/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-05-24%2520%25E4%25B8%258B%25E5%258D%25881.35.01.png" alt="Google Maps 里的 Google Earth" /></p>
+
+    <p>但是 3D 建筑视图只支持部分地区，至少澳门不支持（放平了还是一张纸片，山脉还是有的）。看了看“波士顿”的 3D 建筑，作为地图，这样也就可以了吧（有总比没有好，有点实感吧）。</p>
+
+    <p><img src="https://lh4.googleusercontent.com/-34x79BCI3Xg/UZ78Vh-Hu9I/AAAAAAAAA2Q/bhx106CS-_g/s800/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-05-24%2520%25E4%25B8%258B%25E5%258D%25881.14.42.png" alt="澳门只有山是 3D 的，囧" /></p>
+
+    <p><img src="https://lh6.googleusercontent.com/-FJFS2f3Vuqk/UZ78WIsvXYI/AAAAAAAAA2U/wQVlNBV7b54/s800/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-05-24%2520%25E4%25B8%258B%25E5%258D%25881.21.10.png" alt="波士顿的 3D 建筑" /></p>
+  </li>
+  <li>
+    <p>搜索栏的变化最大了吧，几乎所有以前侧栏的功能都集成到了搜索栏中。将鼠标移动到你的搜索结果上就会自动弹出西面图片中那一坨东西，这样子的集成后，侧边栏取消，让地图占据整个屏幕，很爽啊（毕竟地图才是主题，以前侧边栏占掉三分之一的屏幕让人很是难受）。</p>
+
+    <p><img src="https://lh3.googleusercontent.com/-H_uivjcTnM0/UZ78Y6hhePI/AAAAAAAAA2k/4Fw-rgVWZFM/s800/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-05-24%2520%25E4%25B8%258B%25E5%258D%25881.23.02.png" alt="侧边栏都集成到了搜索栏中" /></p>
+
+    <p>搜索结果也不再是显示在侧边栏（毕竟侧边栏不复存在了），而是直接在地图上加粗显示，更加直观了。</p>
+  </li>
+</ol>
+
+<p>整体来说，新的谷歌地图更加漂亮，更加简便，更加实用。希望赶快能够用到正式版才好。有兴趣的赶快到<a href="https://maps.google.com/help/maps/helloworld/desktop/preview/">这里</a>自己申请体验新版的 Google Maps 吧。下面是一段新 Google Maps 的介绍视频。</p>
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/THxJHcR1D2c?rel=0" frameborder="0" allowfullscreen=""></iframe>
+]]></content>
+  </entry>
+  
+</feed>

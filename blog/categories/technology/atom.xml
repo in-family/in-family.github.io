@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[categories: Technology | 折腾来折腾去]]></title>
+  <link href="http://pikipity.github.com/blog/categories/technology/atom.xml" rel="self"/>
+  <link href="http://pikipity.github.com/"/>
+  <updated>2013-01-30T00:00:00+08:00</updated>
+  <id>http://pikipity.github.com/</id>
+  <author>
+    <name><![CDATA[pikipity]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[tutorialspoint -- Simple Easy Learning]]></title>
+    <link href="http://pikipity.github.com/blog/tutorialspoint.html"/>
+    <updated>2013-08-23T11:24:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/tutorialspoint</id>
+    <content type="html"><![CDATA[<p><img src="https://lh3.googleusercontent.com/-EOXgioZB97c/UhbZ3vnuTXI/AAAAAAAABG0/cMP-tK0Gn4A/s599/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-23%2520%25E4%25B8%258A%25E5%258D%258811.41.01.png" alt="tutorialspoint -- Simple Easy Learning" /></p>
+
+<p>在网上搜索 JavaScript 教程的时候无意间发现了这个网站 – <a href="http://www.tutorialspoint.com/">tutorialpoint（简称 TP）</a>，整体感觉很像是 <a href="http://www.w3schools.com/">W3School</a>，都是一篇一篇短小精悍并且很实用的教程组成，但是内容更为丰富，不仅包括各式各样的编程语言（例如 Ruby、Python，甚至连 Assembly 都有）还包括一些网络及电脑知识（例如什么是 RSS，什么是云计算等等），编程语言的教程中还带有在线仿真编程器，你可以在其网页上就实践教程中的例子，不用为了安装一个编译器或是为了找一个好用的 IDE 伤破脑筋，先学习，觉得这门语言挺好，可以用，再找编译器或是 IDE 也不迟。</p>
+
+<p>快速浏览了一下其中 Python，Ruby 和 Assembly 的教程，感觉教程很基础很实用，非常适合新手学习，上手快，见效快，基本看完一遍教程，大约就明白这门语言的结构并能变出简单的程序了。总而言之，是个学习电脑、网络、编程知识的好地方。</p>
+
+<p><a href="http://www.tutorialspoint.com/">tutorialpoint（简称 TP）网站传送点</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[尝试两种利用 EMD 来计算瞬时频率的方法]]></title>
+    <link href="http://pikipity.github.com/blog/try-two-way-to-find-instaneous-frequency-by-using-emd.html"/>
+    <updated>2013-08-19T19:00:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/try-two-way-to-find-instaneous-frequency-by-using-emd</id>
+    <content type="html"><![CDATA[<p>这两天利用 Matlab 尝试了两种利用 EMD 来计算瞬时频率的方法。EMD 的介绍请看<a href="http://pikipity.github.io/blog/find-a-way-to-calculate-the-instaneous-frequency.html">这里</a>。我利用的是 G. Rilling 的程序计算的 IMF，程序在<a href="http://perso.ens-lyon.fr/patrick.flandrin/emd.html">这里</a>下载。尽管这个程序存在着<a href="http://pikipity.github.io/blog/find-a-way-to-calculate-the-instaneous-frequency.html">这样</a>或<a href="http://pikipity.github.io/blog/find-a-way-to-calculate-the-instaneous-frequency-2.html">那样</a>的问题，但是他利用自己的假设找到了方法来解决，我曾经尝试着利用我在<a href="http://pikipity.github.io/blog/find-a-way-to-calculate-the-instaneous-frequency-2.html">这篇文章</a>中提到的看法来解决那些问题，但是发现，速度大大降低，结果改善却不明显，所以放弃而在这里使用他的程序。</p>
+
+<p>这两种方法中，一种方法先使用 Hilbert Transform 求得 IMF 的瞬时相位，然后利用瞬时相位求得瞬时频率，另一种则不适用 Hilbert Transform，直接根据 IMF 类似弦波这一特性，利用局部极值点与零点来计算瞬时频率。</p>
+
+<!--more-->
+
+<h3 id="section">方法一：瞬时相位求瞬时频率</h3>
+
+<p>关于 Hilber Transform，我在<a href="http://pikipity.github.io/blog/find-a-way-to-calculate-the-instaneous-frequency.html">这篇文章</a>中已经介绍过了，它可以将信号变换为其对应的虚数形式：</p>
+
+<script type="math/tex; mode=display">z(t)=s(t)+j\hat{s}(t)</script>
+
+<p>其中 <script type="math/tex">s(t)</script> 是待分析的 IMF 分量，<script type="math/tex">\hat{s}(t)</script> 是 Hilbert Transform 的结果，利用 Matlab 函数 <code>z=hilbert(s)</code> 可以直接得到 <script type="math/tex">z(t)</script>（注意，得到的是 <script type="math/tex">z(t)</script>，不是 <script type="math/tex">\hat{s}(t)</script>）。由虚数形式我们就可以很轻松地得到瞬时相位 <script type="math/tex">\theta(t)</script> 了。然后利用下式就可以求得瞬时频率了。</p>
+
+<script type="math/tex; mode=display">2\pi f(t)=\omega(t)=\frac{d\theta(t)}{dt}</script>
+
+<p>但是要注意的是，我们只能求得取样点的相位，也就是说，我们求得的相位是离散的，无法求导，这里我使用减法来求近似导数，例如我们要求第 <script type="math/tex">n</script> 个点的瞬时频率，那么就利用下式求得</p>
+
+<script type="math/tex; mode=display">2\pi f(n)=\frac{\theta(n+1)-\theta(n-1)}{2\frac{1}{f_s}}</script>
+
+<p>这里的 <script type="math/tex">f_s</script> 是采样频率。对于数据的第一个点，就将 <script type="math/tex">n-1</script> 改为 <script type="math/tex">n</script>，下面除以一个 <script type="math/tex">\frac{1}{f_s}</script>；对于数据的最后一个点，就将 <script type="math/tex">n+1</script> 换为 <script type="math/tex">n</script>，下面除以一个 <script type="math/tex">\frac{1}{f_s}</script>。Matlab 函数如下，可以在<a href="https://gist.github.com/pikipity/6268454">这里</a>下载。</p>
+
+<pre><code>function [ XPhase,f,Imag,t,f_OGZ,maxf_emdvalue ]=IF_hilbert(x,fs)
+%x is the signal that will be analysised
+%fs is sample frequency
+%XPhase is instanepus phase
+%f is instaneous phase
+%t is the time string
+%f_OGZ is the mean frequency
+%maxf_emdvalue is the frequency whose property is maximum.
+
+if length(x)&lt;2
+   		error('The length of x is too short')
+end
+Ts=1/fs;
+x=hilbert(x);
+XPhase=phase(x);
+for n=1:length(x)
+	 t(n)=n*Ts;
+    Imag(n)=abs(x(n));
+    if n==1
+        f(n)=1/2/pi*(XPhase(2)-XPhase(1))/Ts;
+    elseif n==length(x)
+        f(n)=1/2/pi*(XPhase(n)-XPhase(n-1))/Ts;
+    else
+        f(n)=1/2/pi*(XPhase(n+1)-XPhase(n-1))/2/Ts;
+    end
+end
+f_OGZ=sum(f)/length(f);
+f_range=0:1:100;
+f_pro=hist(f,f_range);
+maxf_emd_pro=max(f_pro);
+maxf_emd_pro_index=find(f_pro==maxf_emd_pro);
+maxf_emdvalue=f_range(maxf_emd_pro_index);
+end
+</code></pre>
+
+<p>为了方便以后的对比，我又求了瞬时频率的平均频率<code>f_OGZ</code>和瞬时频率出现概率最高的频率值<code>maxf_emdvalue</code></p>
+
+<h3 id="section-1">方法二：利用极值点与零点来估算瞬时频率</h3>
+
+<p>根据 IMF 的特性，IMF都可以看做多个弦波的叠加，那么对于弦波，一个极值点与零点之间的时间就可以看做四分之一个波长，我们可以根据这个来估算频率，具体推导和理论请看<a href="https://docs.google.com/file/d/0B8AjE9xqZzSiSk1LaFk2akVCT2M/edit?usp=sharing">这篇论文</a>。重点就是利用下面这个公式</p>
+
+<script type="math/tex; mode=display">f=\frac{1}{12}\left\{\frac{1}{T_4}+\left(\frac{1}{T_2^1}+\frac{1}{T_2^2}\right)+\left(\frac{1}{T_1^1}+\frac{1}{T_1^2}+\frac{1}{T_1^3}+\frac{1}{T_1^4}\right)\right\}</script>
+
+<p>或者</p>
+
+<script type="math/tex; mode=display">f=\frac{1}{7}\left\{\frac{1}{4T_4}+\left(\frac{1}{2T_2^1}+\frac{1}{2T_2^2}\right)+\left(\frac{1}{T_1^1}+\frac{1}{T_1^2}+\frac{1}{T_1^3}+\frac{1}{T_1^4}\right)\right\}</script>
+
+<p>符号代表的意思见下图</p>
+
+<p><img src="https://lh3.googleusercontent.com/-y6Y5rCuC4gY/UhIOqdpzm3I/AAAAAAAABD8/62GvEmRK1a8/s512/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-19%2520%25E4%25B8%258B%25E5%258D%25888.24.33.png" alt="上式符号代表的意思" /></p>
+
+<p>很容易发现，这个式子中很注重局部极值点与零点的位置，所以继续使用 G. Rilling 的近似会带来很大的误差，所以，我重新求取了极值点与零点。对于零点，如果利用 G. Rilling 求取的零点位置上信号值不是零，那么在其附近找到一个点，两者的信号值乘积为负数，那么零点必然就在两者中间，作直线，求直线与横坐标的交点作为零点。对于极值点，我在 G. Rilling 的函数找到的极值点的附近再取六个点，利用这七个点的坐标求取一个二次方程 <script type="math/tex">y=ax^2+bx+c</script> 的系数，这个二次方程的极值点作为信号的极值点。Matlab 函数如下，下载在<a href="https://gist.github.com/pikipity/6268692">这里</a>。其中求新的极值点与零点的函数<code>[ newindmin newindmax newindzer ] = refresh_index( x,indmin,indmax,indzer )</code>在<a href="https://gist.github.com/pikipity/6268738">这里</a>。我同样求了一下瞬时频率的平均频率 <code>f_GZC</code>。</p>
+
+<pre><code>function [f,t,f_GZC]=Instaneous_Frequency_Test(x,fs)
+% [f,t]=Instaneous_Frequency_Test(x,fs)[f,t]=Instaneous_Frequency_Test(x,fs)
+% x is the signal that will be analysised.
+% fs is the sampling frequency
+% f is the instaneous frquency
+% t is the time range of each instaneous frequency
+% f_GZC is the mean frequency
+
+%the length of x must be larger than 8
+if length(x)&lt;8
+    error('the length of x must be larger than 7')
+end
+%clear results
+f=[]; 
+t=[];
+%calculate sampling periode
+Ts=1/fs;
+%calculate local extrema and zero
+[indmin indmax indzer]=extr(x);
+%refresh local extrema and zero
+[ newindmin newindmax newindzer ] = refresh_index( x,indmin,indmax,indzer );
+indzer=newindzer;
+indmin=newindmin;
+indmax=newindmax;
+%get the index of all indmin, indmax and indzer
+%[index,I] = rerange_index( indmin,indmax,indzer );
+index=sort([indmin indmax indzer]);
+if length(index)&lt;5
+    error('Too few extrema and zero')
+end
+%prepare Begin point index and finish point index
+L_index=length(index);
+%begin calculate instaneous frquency
+Begin_point=4;
+Finish_point=L_index-4;
+for Number_index=1:L_index-1
+    if Number_index==1
+        t=[t;index(Number_index) index(Number_index+1)];
+        t_q=(index(Number_index+1)-index(Number_index))*Ts;
+        t_h_2=(index(Number_index+2)-index(Number_index))*Ts;
+        t_f_4=(index(Number_index+4)-index(Number_index))*Ts;
+        f=[f 1/3*(1/t_q/4+1/t_h_2/2+1/t_f_4)];
+    elseif Number_index==2
+        t=[t;index(Number_index) index(Number_index+1)];
+        t_q=(index(Number_index+1)-index(Number_index))*Ts;
+        t_h_1=(index(Number_index+1)-index(Number_index-1))*Ts;
+        t_h_2=(index(Number_index+2)-index(Number_index))*Ts;
+        t_f_3=(index(Number_index+3)-index(Number_index-1))*Ts;
+        t_f_4=(index(Number_index+4)-index(Number_index))*Ts;
+        f=[f 1/5*(1/t_q/4+1/t_h_1/2+1/t_h_2/2+1/t_f_3+1/t_f_4)];
+    elseif Number_index==3
+        t=[t;index(Number_index) index(Number_index+1)];
+        t_q=(index(Number_index+1)-index(Number_index))*Ts;
+        t_h_1=(index(Number_index+1)-index(Number_index-1))*Ts;
+        t_h_2=(index(Number_index+2)-index(Number_index))*Ts;
+        t_f_2=(index(Number_index+2)-index(Number_index-2))*Ts;
+        t_f_3=(index(Number_index+3)-index(Number_index-1))*Ts;
+        t_f_4=(index(Number_index+4)-index(Number_index))*Ts;
+        f=[f 1/6*(1/t_q/4+1/t_h_1/2+1/t_h_2/2+1/t_f_2+1/t_f_3+1/t_f_4)];
+    elseif Number_index==L_index-1
+        t=[t;index(Number_index) index(Number_index+1)];
+        t_q=(index(Number_index+1)-index(Number_index))*Ts;
+        t_h_1=(index(Number_index+1)-index(Number_index-1))*Ts;
+        t_f_1=(index(Number_index+1)-index(Number_index-3))*Ts;
+        f=[f 1/3*(1/t_q/4+1/t_h_1/2+1/t_f_1)];
+    elseif Number_index==L_index-2
+        t=[t;index(Number_index) index(Number_index+1)];
+        t_q=(index(Number_index+1)-index(Number_index))*Ts;
+        t_h_1=(index(Number_index+1)-index(Number_index-1))*Ts;
+        t_h_2=(index(Number_index+2)-index(Number_index))*Ts;
+        t_f_1=(index(Number_index+1)-index(Number_index-3))*Ts;
+        t_f_2=(index(Number_index+2)-index(Number_index-2))*Ts;
+        f=[f 1/5*(1/t_q/4+1/t_h_1/2+1/t_h_2/2+1/t_f_1+1/t_f_2)];
+    elseif Number_index==L_index-3
+        t=[t;index(Number_index) index(Number_index+1)];
+        t_q=(index(Number_index+1)-index(Number_index))*Ts;
+        t_h_1=(index(Number_index+1)-index(Number_index-1))*Ts;
+        t_h_2=(index(Number_index+2)-index(Number_index))*Ts;
+        t_f_1=(index(Number_index+1)-index(Number_index-3))*Ts;
+        t_f_2=(index(Number_index+2)-index(Number_index-2))*Ts;
+        t_f_3=(index(Number_index+3)-index(Number_index-1))*Ts;
+        f=[f 1/6*(1/t_q/4+1/t_h_1/2+1/t_h_2/2+1/t_f_1+1/t_f_2+1/t_f_3)];
+    else
+        t=[t;index(Number_index) index(Number_index+1)];
+        t_q=(index(Number_index+1)-index(Number_index))*Ts;
+        t_h_1=(index(Number_index+1)-index(Number_index-1))*Ts;
+        t_h_2=(index(Number_index+2)-index(Number_index))*Ts;
+        t_f_1=(index(Number_index+1)-index(Number_index-3))*Ts;
+        t_f_2=(index(Number_index+2)-index(Number_index-2))*Ts;
+        t_f_3=(index(Number_index+3)-index(Number_index-1))*Ts;
+        t_f_4=(index(Number_index+4)-index(Number_index))*Ts;
+        f=[f 1/7*(1/t_q/4+1/t_h_1/2+1/t_h_2/2+1/t_f_1+1/t_f_2+1/t_f_3+1/t_f_4)];
+    end
+end
+t=t.*1/fs;
+f_GZC=sum(f)/length(f);
+end
+</code></pre>
+
+<h3 id="fft-">两种方法连同 fft 的比较</h3>
+
+<p>下面来比较一下这两种方法，因为 现在使用最多的还是直接用 fft 来计算频率值，所以这里连同 fft 一起进行比较比较。分析的数据，我是用的是实验室曾经记录的 SSVEP 的信号，数据可以在<a href="http://pan.baidu.com/share/link?shareid=3490016825&amp;uk=4080321956">这里</a>下载，将信号保存到变量<code>x</code>中运行下面这段程序（直接加载入 Matlab 就已经保存在变量<code>x</code>中了），程序在<a href="https://gist.github.com/pikipity/6268877">这里</a>下载</p>
+
+<pre><code>% signal -&gt; x
+%begin
+fs=600;
+Ts=1/fs;
+t=1:length(x);
+t=(t-1).*Ts;
+%figure('name','original signal');plot(t,x)
+%IMF=eemd_test(x); %try to use eemd to calculate IOF
+IMF=emd(x);
+% original signal
+figure('name','original signal')
+plot(t,x)
+xlabel('t (s)')
+ylabel('Amplitude')
+%IMF components
+figure('name','IMF')
+for n=1:size(IMF,1)
+    subplot(size(IMF,1),1,n)
+    plot(t,IMF(n,:))
+    xlabel('t (s)')
+    ylabel('Amplitude')
+    %hold on
+    %plot(t,IMF(n,:),'rx')
+end
+%fft for each IMF components
+figure('name','fft')
+maxf_fft=[];
+for n=2:size(IMF,1)-1
+    subplot(size(IMF,1)-2,1,n-1)
+    [frequency,fft_result]=fft_plot(IMF(n,:),fs);
+    plot(frequency,abs(fft_result(1:length(frequency))))
+    xlabel('f (Hz)')
+    ylabel('Amplitude')
+    axis([0 100 0 max(abs(fft_result(1:length(frequency))))])
+    maxf_fft_index=find(abs(fft_result(1:length(frequency)))==max(abs(fft_result(1:length(frequency)))));
+    maxf_fftvalue=frequency(maxf_fft_index);
+    maxf_fft(n-1)=maxf_fftvalue(1);
+end
+%IF not using hilbert transform
+%IF property
+figure('name','IF')
+xlabel('frequency')
+ylabel('probility (%)')
+meanf=[];
+maxf_emd=[];
+for n=2:size(IMF,1)-1
+    subplot(size(IMF,1)-2,1,n-1)
+    [f,tf,f_GZC]=Instaneous_Frequency_Test(IMF(n,:),600);
+    meanf(n-1)=f_GZC;
+    f_range=0:1:100;%frequency range
+    f_pro=hist(f,f_range);
+    plot(f_range,f_pro./length(f)*100);
+    xlabel('frequency')
+    ylabel(strcat('IMF',num2str(n),'(%)'))
+    maxf_emd_pro=max(f_pro);
+    maxf_emd_pro_index=find(f_pro==maxf_emd_pro);
+    maxf_emdvalue=f_range(maxf_emd_pro_index);
+    maxf_emd(n-1)=maxf_emdvalue(1);
+end
+%IF in time domain
+figure('name','IF value')
+for h=2:size(IMF,1)-1
+    subplot(size(IMF,1)-2,1,h-1)
+    xlabel('t (s)')
+    ylabel('f (Hz)')
+    [f,tf,f_GZC]=Instaneous_Frequency_Test(IMF(h,:),600);
+    hold on
+    for n=1:length(f)
+        plot([tf(n,1),tf(n,2)],[f(n),f(n)],'k')
+        if n~=length(f)
+            plot([tf(n,2),tf(n,2)],[f(n+1),f(n)],'k')
+        end
+    end
+end
+%IF using hilbert transform
+%IF property
+figure('name','IF property hilbert')
+for n=2:size(IMF,1)-1
+    subplot(size(IMF,1)-2,1,n-1)
+    xlabel('f (Hz)')
+    ylabel('Number')
+     [ XPhase,f,Imag,t,f_OGZ,maxf_emdvalue ]=IF_hilbert(IMF(n,:),fs);
+     maxf_emd2(n-1)=maxf_emdvalue;
+     f_range=0:1:100;%frequency range
+    f_pro=hist(f,f_range);
+    plot(f_range,f_pro./length(f)*100);
+    xlabel('frequency')
+    ylabel(strcat('IMF',num2str(n),'(%)'))
+end
+%IF in time domain
+figure('name','IF value hilbert')
+for h=2:size(IMF,1)-1
+    subplot(size(IMF,1)-2,1,h-1)
+    xlabel('t (s)')
+    ylabel('f (Hz)')
+    [ XPhase,f,Imag,t,f_OGZ,maxf_emdvalue ]=IF_hilbert(IMF(h,:),fs);
+    plot(t,f);
+end
+disp(strcat('frequency in fft from IMF2 to IMF',num2str(size(IMF,1)-1),':'))
+disp(maxf_fft)
+disp(strcat('frequency in emd not uing heilbert from IMF2 to 	IMF',num2str(size(IMF,1)-1),':'))
+disp(maxf_emd)
+disp(strcat('frequency in emd using hilbert from IMF2 to 	IMF',num2str(size(IMF,1)-1),':'))
+disp(maxf_emd2)
+</code></pre>
+
+<p>运行之后会生成多幅图片，对于 15Hz 的信号会得到如下的图片：</p>
+
+<p><img src="https://lh4.googleusercontent.com/-0xZGCMWdvnI/UjLU2NV1mII/AAAAAAAABKk/1UGjM6MJRLU/s720/15-1.jpg" alt="15Hz 原始信号" /></p>
+
+<p><img src="https://lh5.googleusercontent.com/-TwMBSrhpz8M/UjLU2oioM6I/AAAAAAAABKM/gONw6OfgAXA/s800/15-2.jpg" alt="15Hz 各 IMF 分量时域图" /></p>
+
+<p><img src="https://lh6.googleusercontent.com/-GQjdCWO10PE/UjLU24GARmI/AAAAAAAABKQ/ltPy7CnekzY/s800/15-3.jpg" alt="15Hz 各 IMF fft 分析得到的频域图" /></p>
+
+<p><img src="https://lh6.googleusercontent.com/-t2EUbNuPxLU/UjLU3LfTOnI/AAAAAAAABKY/bLHARTXDYOw/s800/15-4.jpg" alt="15Hz 各 IMF 利用方法二得到的各瞬时频率在频域上的分布" /></p>
+
+<p><img src="https://lh4.googleusercontent.com/-6MV4J5HrAJ8/UjLU3mHvOaI/AAAAAAAABKw/w4kLQhfxcxA/s720/15-5.jpg" alt="15Hz 各 IMF 利用方法二得到的个瞬时频率时域分布" /></p>
+
+<p><img src="https://lh5.googleusercontent.com/-xVpy3GU7ZiA/UjLU3gzA3LI/AAAAAAAABKg/vvoYW_h4cbA/s800/15-6.jpg" alt="15Hz 各 IMF 利用方法一得到的各瞬时频率在频域上的分布" /></p>
+
+<p><img src="https://lh5.googleusercontent.com/--CtgNydXY3o/UhIZcbAxgiI/AAAAAAAABFg/4Ymz3vJTATk/s671/6.jpg" alt="15Hz 各 IMF 利用方法一得到的个瞬时频率时域分布" /></p>
+
+<p>对于 10Hz 的信号会得到如下的图片：</p>
+
+<p><img src="https://lh5.googleusercontent.com/-oRJXvkHsb0I/UjLU0L2GLKI/AAAAAAAABJY/xRUbYdyfacA/s800/10-1.jpg" alt="10Hz 原始信号" /></p>
+
+<p><img src="https://lh5.googleusercontent.com/-KM8dafNVOX4/UjLU0YKtv8I/AAAAAAAABJc/D_vIyUT4Bao/s720/10-2.jpg" alt="10Hz 各 IMF 分量时域图" /></p>
+
+<p><img src="https://lh6.googleusercontent.com/--FjsjtAdygg/UjLU0K2zjcI/AAAAAAAABJQ/KlNVWsKeRFk/s800/10-3.jpg" alt="10Hz 各 IMF fft 分析得到的频域图" /></p>
+
+<p><img src="https://lh6.googleusercontent.com/-N06vYTktp2I/UjLU04xcZXI/AAAAAAAABJg/WNO1VMYZnpo/s720/10-4.jpg" alt="10Hz 各 IMF 利用方法二得到的各瞬时频率在频域上的分布" /></p>
+
+<p><img src="https://lh3.googleusercontent.com/-PS9f7lRs24Q/UjLU1AtAIYI/AAAAAAAABJ8/Ceu9qIzU3vE/s720/10-5.jpg" alt="10Hz 各 IMF 利用方法二得到的个瞬时频率时域分布" /></p>
+
+<p><img src="https://lh4.googleusercontent.com/-oF2ANnl2h1w/UjLU1UAksFI/AAAAAAAABJs/Jd5kqOl4gMM/s640/10-6.jpg" alt="10Hz 各 IMF 利用方法一得到的各瞬时频率在频域上的分布" /></p>
+
+<p><img src="https://lh6.googleusercontent.com/-jQR7RJxZhwE/UhIZcNFP4_I/AAAAAAAABFU/xX1crLsefx8/s559/6-2.jpg" alt="10Hz 各 IMF 利用方法一得到的个瞬时频率时域分布" /></p>
+
+<p>在对于数据特征提取的时候，对于 fft，我们直接找频域图（就是第二幅图）上的最大值所对应的频率就是信号的频率，而对于方法一和方法二，我们对于所有瞬时频率进行统计（就是第三和第五幅图，我这里是从1到100，以1为单位进行统计，也就是统计瞬时频率为0.5~1.5的点数，然后统计瞬时频率为1.5~2.5的点数，以此类推），范围内点数最多的频率就是此信号的频率。所以每个频率下的六幅图中，我们重点关注第二、第三和第五幅图，会发现上面两种方法的结果的区别并不明显，并且显然 fft 的结果比上面两种方法的结果还明显。再看一下程序输出的结果，对于15Hz，fft显示频率为14.9414Hz，方法一的结果为13Hz，方法二的结果为13Hz。对于10Hz，fft显示的频率为9.9606Hz，方法一为10Hz，方法二为10Hz。很显然，方法一二在15Hz的时候变得极为不准确。再看图，会发现15Hz的时候方法一得到的瞬时频率时域图（第六幅图）竟然出现了负频，但是 IMF 应该是不存在负频的，而且边缘出现突变，说明算法并不完美，还需要解决这两个问题，而且应该尝试更多的数据并缩短时间（现在我使用的是全部的6秒钟数据）来看看结果如何。</p>
+
+<p>最后总结一下，尽管尝试了两种方法，但是和论文上看到的结果相去甚远，下一步需要：</p>
+
+<ol>
+  <li>
+    <p>解决两个已发现问题：</p>
+
+    <ul>
+      <li>15Hz的时候方法一得到的瞬时频率时域图出现负频的问题</li>
+      <li>瞬时频率时域图边缘突变</li>
+    </ul>
+  </li>
+  <li>
+    <p>缩短时间看结果</p>
+  </li>
+</ol>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[寻找一种有效估算瞬时频率的方法（EMD 求法讨论 续）]]></title>
+    <link href="http://pikipity.github.com/blog/find-a-way-to-calculate-the-instaneous-frequency-2.html"/>
+    <updated>2013-08-14T03:19:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/find-a-way-to-calculate-the-instaneous-frequency-2</id>
+    <content type="html"><![CDATA[<p>上接<a href="http://pikipity.github.io/blog/find-a-way-to-calculate-the-instaneous-frequency.html">寻找一种有效估算瞬时频率的方法</a>。</p>
+
+<h3 id="hkt--imf">如何判断 <script type="math/tex">h_k(t)</script> 是 IMF</h3>
+
+<p>黄锷院士提供了两种判断方法：</p>
+
+<ol>
+  <li>
+    <p>根据 IMF 的定义：</p>
+
+    <ol>
+      <li>在整个信号上，局部极值（包括局部极大值和局部极小值）的个数和零点的个数必须等于或最多只能相差一个。</li>
+      <li>在任意一点，局部极大值所形成的上包络线和局部极小值所形成的下包络线的平均值等于0</li>
+    </ol>
+
+    <p>在这个定义中涉及局部极值问题，也就是我们将讨论的第三个问题，所以我们这里暂且假定我们可以通过一种方法找到局部极值，那么条件的第一点就可以解决了，但是这里要注意，条件的第一点并不能等价于“所有局部极大值都大于0并且所有极小值都小于0”，尽管通过论文中的论述会很容易认为黄锷院士的本意是这样，但是仅仅根据这条论述，会出现很多特殊情况，下面举几个特殊情况的例子，如图</p>
+
+    <p><img src="https://lh6.googleusercontent.com/-7HQOCNGo3cE/UgqLD89QF7I/AAAAAAAABCs/8flUGmA5sT4/s559/1.png" alt="一个局部极小值在零以上或是一个局部极大值在零以下" /></p>
+
+    <p><img src="https://lh5.googleusercontent.com/-mCwygyF6gUY/UgqLD0CDH5I/AAAAAAAABC0/g5aOdQH99T4/s559/2.png" alt="刚好一个局部极值是零点" /></p>
+
+    <p><img src="https://lh5.googleusercontent.com/-6cLysf5vzQA/UgqLDzAvxpI/AAAAAAAABCo/wDF11u8mCGM/s559/3.png" alt="刚好两个局部极值是零点" /></p>
+
+    <p>在 G. Rilling 编写的 MATLAB 程序中，其使用的是这种方法判断的 IMF，有的时候的确会出现上面列出的三种特殊情况，但是既然是按照定义来的，那么应该也没有什么问题，况且对结果也没有大的影响。</p>
+
+    <p>对于条件的第二点则比较困难，即使我们通过三次样条差值找到了包络线，但是我们能够求的也只是插值之后线上的取样点，所以我们只能通过取样点估算上下包络线的平均值，所以这里写为“约等于”0更为合适。</p>
+  </li>
+  <li>
+    <p>黄锷原始在论文中提到另外一种更为简单的判断方式 – 计算 SD 值：</p>
+
+    <table>
+      <tbody>
+        <tr>
+          <td>$$SD_k=\frac{\sum_{t=0}^T \left</td>
+          <td>h_{k-1}(t)-h_k(t) \right</td>
+          <td>^2}{\sum<em>{t=0}^T h</em>{k-1}^2 (t)}$$</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>然后预设一个范围，如果 SD 在此范围内，那么就是 IMF，否则不是。同时，黄锷院士指出 SD 值一般在0.2~0.3之间，但是我看到的大多数程序都是以0.3为界进行判断，小于0.3就是 IMF，大于0.3就不是。Github 上的那个程序就是如此判断的，这样判断的好处是简化了计算过程，使判断变得极为简单，坏处也是显而易见的，SD 的阀值设置的不同导致最终结果就不一样，这和 Wavelet Transform 中选取小波种类类似，阀值的选择反而增大了分析的难度。简化计算难度，增大阀值选择难度，我认为不可取，所以如果能找到一种很好的办法选择出恰当的局部极值点，我认为还是第一种判断方法比较好。</p>
+  </li>
+</ol>
+
+<h3 id="section">局部极值点与零点的判断</h3>
+
+<p>由于将来计算瞬时频率需要用到零点，所以这里我又加入了零点的判断。局部极值点与零点判断困难是因为我们需要通过有限的原始信号采样点来估计出原始信号，由于采样带来的信息缺失导致困难很大，但是因为我们不需要估计出整个信号，我们只需要估计出原始信号的局部极值与零点就可以了，如果假定采样信号的极值点“约等于”原始信号的极值点，那么我们就面临多个很容易遇到的问题，总结起来列在这里：</p>
+
+<ol>
+  <li>采样点中出现连续的极值点与零点如何处理？</li>
+  <li>采样点刚好错过极值点与零点如何处理？</li>
+  <li>边界点如何处理？</li>
+</ol>
+
+<p>在 G. Rilling 的程序中，他取了连续极值点或零点的中间的那个采样点来作为极值点与零点。如果原始信号是一个类正弦信号，这的确是一种好的近似方法，但是对于方波，这种近似方法显然就不合适了。而 Github 上的那个程序，完全没有考虑这个问题。</p>
+
+<p>对于采样点刚好错过极值点与零点的情况，也就是零点或极值点在两个点之间的情况，G. Rilling 的程序只考虑了零点的情况，他将前一个点作为零点的近似，如果采样频率足够大，这的确可以，但是如果采样频率不够大，很显然这样会带来很大的误差。</p>
+
+<p>对于边界点，G. Rilling 根据已有的采样点将边界沿拓，这样边界点就不再是边界点了。在 Github 上的程序则是很简单的将两个边界点直接加入到局部极大值与局部极小值的序列中去。边界沿拓虽然很好，但是复杂并且存在沿拓方法选择的问题。将边界点直接加入虽然简单，但是可能会导致求出的 IMF 边缘震荡，导致分解出无限个 IMF。所以两种方法各有优劣。</p>
+
+<h2 id="section-1">我的想法</h2>
+
+<p>其实总结起来就是两个大问题：</p>
+
+<ol>
+  <li>用局部极值求出的上下包络线会出现与原信号相交的问题，这怎么办？</li>
+  <li>如何通过离散信号求出原信号的局部极值与零点？</li>
+</ol>
+
+<p>而第二个大问题主要就是上面提到的三个特殊情况：</p>
+
+<ol>
+  <li>采样点中出现连续的极值点与零点如何处理？</li>
+  <li>采样点刚好错过极值点与零点如何处理？</li>
+  <li>边界点如何处理？</li>
+</ol>
+
+<p>对于的第二个大问题，我认为可以使用原始信号与以求出的上下包络线的切点来修正上下包络线以此来得到不会与原始信号相交的包络线。</p>
+
+<p>对于采样点中出现连续的极值点与零点，我认为可以全部用来计算包络线，无依据，仅仅是感觉，而且由于脑电几乎不会出现方波的状况，所以我认为 G. Rilling 的解决方法已经可以了。</p>
+
+<p>对于采样点刚好错过极值点与零点的情况，如果是零点，我们可以通过两点确定的直线，估算出零点的位置。对于极值点，可以通过再多取几个点做插值，来估算极值点的位置。</p>
+
+<p>对于边界点，我认为还是沿拓比较好，但是沿拓的方法还有待考虑。</p>
+
+<p>但是如果根据我上面提到的方法修改 G. Rilling 的程序，必然带来一个很严重的情况，就是处理时间的延长。收集数据时间变短，但是处理时间变长，致使总时间几乎不改变甚至变长，这完全没有达到我们开始希望的结果嘛，所以 EMD 求法有待讨论与寻找。我认为，如果可以找到一种快速有效解决上述问题的方法，寻找瞬时频率并不是问题。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[寻找一种有效估算瞬时频率的方法（EMD 求法讨论）]]></title>
+    <link href="http://pikipity.github.com/blog/find-a-way-to-calculate-the-instaneous-frequency.html"/>
+    <updated>2013-08-09T18:50:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/find-a-way-to-calculate-the-instaneous-frequency</id>
+    <content type="html"><![CDATA[<p>我试图寻找一种可以用比较少的数据点就可以较为精确的估算某个时刻瞬时频率的方法，当然了，根据“薛定尔的胖次”（对于虐猫狂人薛定谔不熟悉的可以去看<a href="https://docs.google.com/file/d/0B8AjE9xqZzSiNlVlSEkxNi1uTFE/edit?usp=sharing">这里</a>的这本少儿读本，写的很好）在信号分析中的拓展，如果要精确计算瞬时频率就需要一个在时域上无限长的信号，当然这是不可能的，所以，如果能够找到一种计算方法，在时域上的精度和频域上的精度问题上去的平衡就可以了。</p>
+
+<p>在经过一番大搜索之后，发现现在最为流行的求瞬时频率的方法就是 HHT（希尔伯特-黄转换，也就是 EMD，经验模态分析，论文在<a href="https://docs.google.com/file/d/0B8AjE9xqZzSiUDhGRkJ3UEwzNjQ/edit?usp=sharing">这里</a>，洋洋洒洒90多页，大家慢慢看）。</p>
+
+<h2 id="section">什么是瞬时频率</h2>
+
+<p>第一个问题我就说不清楚，一般来说，把瞬时频率定义为</p>
+
+<script type="math/tex; mode=display">f(t)=\frac{1}{2\pi}\frac{d\theta(t)}{dt}</script>
+
+<p>这个定义是 Cohen 提出的，但是这个定义仅限于 “monocomponent function”，但是什么是 “monocomponent function” 呢？他没说。。。（坑爹啊 (╯‵□′)╯︵┻━┻）但是 Gabor， Bedrosian 和 Boashash 提出：</p>
+
+<blockquote>
+  <p>for any function to have a meaningful instantaneous frequency, the real part of its Fourier transform has to have only positive frequency.</p>
+</blockquote>
+
+<p>黄锷院士（就是这个 HHT 的创始人啦）进一步验证得到，对于平均值为零的局部对称信号而言，上述定义的瞬时频率才具有物理意义。</p>
+
+<p>据说，“澳门大学”（请注意，这里不是做宣传）的钱涛教授在提出 AFD 的时候定义了更为准确的瞬时频率，但是博主愚钝，到现在也没看懂他的论文，甚至都不知道从何看起，所以更不用提他提出的方法和定义了。</p>
+
+<h2 id="section-1">寻找新方法的原因</h2>
+
+<p>在寻找到 HHT 之前，手头已经有的方法大体可以分为两种 – Fourier Transform 和 Wavelet Transform，当然还包括一些 Fourier Transform 的变种，例如 Wigner–Ville Distribution。但是这两种方法都存在着各种各样的缺点。</p>
+
+<h3 id="fourier-transform">Fourier Transform</h3>
+
+<p>我们都知道，Fourier Transform 是试图将一个信号分解为多个幅值和频率固定的三角函数线，对于其对于信号的要求是稳定、收敛，但是实际中，尤其是在脑电中，我们无法保证自己截取的信号就是符合要求的。而且 Fourier Transform 所求的是一种平均频率分布，这意味其会带来两大缺点：</p>
+
+<ol>
+  <li>能量分散到了整个频谱上，难以辨清具体频率所在。</li>
+  <li>产生了无意义的负频。</li>
+</ol>
+
+<p>当然，以上两点都可以接受的话，其最致命的缺点就是 <strong>丧失了时间信息</strong>。尽管 STFT (Short Time Fourier Transform) 利用窗截取某个时间段的信号，可以在一定程度上获得瞬间频率，但是由于窗长度一旦选取就固定不变，导致时间精度固定，从而导致频率精度也固定，这样对频率的突变就及其不敏感，而检测突变则是信号分析中非常重要的，所以 Fourier Transform 难以分析瞬时频率。</p>
+
+<h3 id="wavelet-transform">Wavelet Transform</h3>
+
+<p>根据下面 Wavelet Transform 的公式，我们可以清楚的看出，为了改善 Fourier Transform 会丧失时间信息的缺点，Wavelet Transform 添加两个参数 $b$（时间刻度）和 $a$（频率刻度，可以转化为对应的频率），这样就可以同时获得时间和频率两方面的信息。同时，不再使用三角函数作为基函数，而是使用小波 $\phi$ 作为基函数，可以解决 Fourier Transform 用稳定信号分析不稳定信号的问题。</p>
+
+<script type="math/tex; mode=display">W(a,b;W,\phi)=\frac{1}{\sqrt{a}}\int_{-\infty}^{\infty}W(t)\phi^*(\frac{t-b}{a})dt</script>
+
+<p>但其对 Fourier Transform 的改善还是存在缺点：</p>
+
+<ol>
+  <li>尽管随着 $a$ 的变化，频率可以在多分辨度下进行解析，但是在某一个分辨度下，其分辨精度还是固定不变的。</li>
+  <li>小波一旦选定就无法改变，没有办法保证此小波在整个波段上都合适。</li>
+  <li>小波选择问题难以解决，一般只不过是通过经验来进行选择。</li>
+</ol>
+
+<h2 id="hht">HHT</h2>
+
+<p>就算上面两种方法可以完美解析实际信号，但是也很难从他们的算法中找到计算瞬时频率的办法，那么根据提到的定义，要找瞬时频率，就要先找瞬时相位，于是慢慢征程刚开始啊。。。</p>
+
+<h3 id="ht">HT</h3>
+
+<p>Gabor 提出一种定义信号相位的方法，如果能够把信号表示成为其对应的复数形式（如下），那么相位自然也就找到了。</p>
+
+<script type="math/tex; mode=display">z(t)=s(t)+j\hat{s}(t)</script>
+
+<p>上式中的 $\hat{s}(t)$ 可以通过 Hilbert Transform (HT) 来得到。下式就是 HT 的转化方法。</p>
+
+<script type="math/tex; mode=display">\hat{s}(t)=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{s(t)}{t-\tau}d\tau</script>
+
+<p>为了使信号可以进行 HT，并且具有有意义的瞬时频率，必须先对信号进行处理，于是黄锷院士提出 HHT。</p>
+
+<h3 id="imf">IMF</h3>
+
+<p>所谓对信号进行处理，就是将信号拆分为多个可以进行 HT 来寻找瞬时频率的信号 – Intrinsic Mode Function（IMF）。IMF 满足一下两点：</p>
+
+<ol>
+  <li>在整个信号上，局部极值（包括局部极大值和局部极小值）的个数和零点的个数必须等于或最多只能相差一个。</li>
+  <li>在任意一点，局部极大值所形成的上包络线和局部极小值所形成的下包络线的平均值等于0</li>
+</ol>
+
+<p>这个由原始信号到 IMF 的分解流程称为 Empirical Mode Decomposition (EMD)。</p>
+
+<h3 id="emd">EMD</h3>
+
+<p>EMD 的流程非常明确，在上面提供的论文中都有写，待分析的信号为 $s(t)$：</p>
+
+<ol>
+  <li>找出 $s(t)$ 的所有局部极大值和局部极小值，接着利用三次样条插值得到由局部极大值连接形成的上包络线和局部极小值连接形成的下包络线。</li>
+  <li>求出上下包络线的平均值 <script type="math/tex">m_1(t)</script></li>
+  <li>
+    <p>利用下式得到第一分量：</p>
+
+<script type="math/tex; mode=display">h_1(t)=s(t)-m_1(t)</script>
+  </li>
+  <li>
+    <p>检查 <script type="math/tex">h_1(t)</script> 是否是 IMF，如果不是则将 <script type="math/tex">h_1(t)</script> 作为原信号返回第一步，直到 <script type="math/tex">h_k(t)</script> 是 IMF，就得到了一个 IMF 分量 <script type="math/tex">c_1(t)</script>，也就是</p>
+
+<script type="math/tex; mode=display">c_1(t)=h_k(t)</script>
+  </li>
+  <li>
+    <p>求剩余分量：</p>
+
+<script type="math/tex; mode=display">r_1(t)=s(t)-c_1(t)</script>
+  </li>
+  <li>将 $r_1(t)$ 当做新资料，返回步骤1，直到 $r_n(t)$ 为单调函数完成分解。</li>
+</ol>
+
+<p>完成分解后，就将原始信号分解为了 $n$ 个 IMF 和一个趋势函数，也就是</p>
+
+<script type="math/tex; mode=display">s(t)=\sum_{k=1}^nc_k(t)+r_n(t)</script>
+
+<h2 id="emd--matlab-">EMD 的 MATLAB 实现</h2>
+
+<p>尽管上面的算法流程第一次看起来清晰明了，但是要注意，我们分析的是离散的数据点，而不是连续的信号，于是这就带来了很多问题，以至于上面流程中很多名词都没有严格的定义，需要我们自己来在编写程序的时候来定义，根据定义的不同，程序最后运行的结果也就会不同。一边考虑我们要分析的信号是离散信号，一边在看一遍上面的流程就会很容易发现下面几个问题：</p>
+
+<ol>
+  <li><strong>如何定义离散信号的局部极大值与局部极小值？</strong>因为我们的离散信号是通过实际信号采样得来的，那么就会出现离散信号的局部极值与原始实际信号的局部极值不一样的情况，甚至出现多个连续一样的局部极值，处理起来非常麻烦；而且在考虑局部极值的时候还会出现边缘问题，<strong>离散信号最开始与最末尾的两个点如何处理？</strong>绝对不能舍弃，因为在上面的流程中计算局部极值是会在循环中多次出现，如果每次舍弃两个点，会丢失大量数据，而处理不当，在插值的时候边缘会产生出奇怪的震荡导致 IMF 计算不准确影响瞬时频率估计。</li>
+  <li><strong>三次样条插值如何用 MATLAB 实现？</strong>这应该是最容易解决的问题了，因为 MATLAB 中有现成的函数，随后介绍。</li>
+  <li><strong>如何判断 $h_k(t)$ 是 IMF？</strong>这个问题应该是第二简单的问题了，随后介绍。</li>
+</ol>
+
+<p>以上三个问题的解决方式不同，分解出的 IMF 也就不同，估算得到的瞬时频率的准确度也就不同，我找了多个程序，并自己编写了一个程序，但是效果都不能说是很好，其实还是蛮失望的，EMD 这个方法出现也有很多年了，结果连一个现成的比较完美的 MATLAB 程序都没有。这里使用国际比较认可的由一个法国人 G. Rilling 编写的程序（可以在<a href="http://perso.ens-lyon.fr/patrick.flandrin/emd.html">这里</a>下载到）和我在 Github 上找到的一个效果速度也还可以的 MATLAB 程序（可以在<a href="https://github.com/daochenghaike/EMD.git">这里</a>下载到）综合说明一下他们对上面三个问题的解决方法和我的一些见解。（我写的程序在<a href="https://github.com/pikipity/EMD-using-MATLAB.git">这里</a>，但是仅仅当做错误教程看一看就可以了，方法极度不可取，速度慢不说，分解出来的本应完全正交的 IMF 的频域还会出现重叠，边缘也出现了震荡，导致出现了很多低频杂波。）</p>
+
+<p>由于上面三个问题难易程度不一，我会先讨论第二个问题，然后是第三个，最后再讨论第一个。</p>
+
+<h3 id="matlab-">如何用 MATLAB 实现三次样条差值</h3>
+
+<p>在 MATLAB 中有三种方法可以实现三次样条差值：</p>
+
+<ol>
+  <li>
+    <p><code>yy=spline(x,y,xx)</code>：我从 Github 上找到的那个程序使用的是这种插值方式。其中，<code>x</code>是断点的横坐标，<code>y</code>是断点的纵坐标，<code>xx</code>是插值之后重新构成的函数采样点的横坐标，<code>yy</code>是插值之后重新构成的函数采样点的纵坐标。当然，你也可以使用 <code>pp=spline(x,y)</code>，这样得到的<code>pp</code>是插值之后的到的函数的 structure，然后可以通过 <code>yy=ppval(pp,xx)</code> 来得到重新构成的函数的采样点。插值效果如图</p>
+
+    <p><img src="https://lh6.googleusercontent.com/-DNSR-F6UQw0/UgY0P9GUX7I/AAAAAAAABBk/L_rerjnTI2k/s912/1.jpg" alt="使用```spline```进行插值" /></p>
+  </li>
+  <li>
+    <p><code>pp=csape(x,y,CONDS)</code>：在我的程序中，这个函数的特点是你可以通过改变<code>CONDS</code>来使用不同的计算三系样条插值的方法，这些方法唯一的不同就是使用的 boundary condition 不一样，根据你选择的方法的不同，你可能需要多提供边界的一次导数或是二次导数作为额外的 boundary condition 来进行计算。其他的参数和第一个方法一样。效果如图</p>
+
+    <p><img src="https://lh4.googleusercontent.com/-LRaMxf6QZdo/UgY0PzPmmTI/AAAAAAAABBs/isBKeOjLf28/s912/2.jpg" alt="使用```csape```进行插值" /></p>
+  </li>
+  <li>
+    <p><code>yy=interp1(x,y,xx,'spline')</code>：这个方法的本质还是调用第一个方法中的函数进行运算，所以其实可以合并到方法一中。G. Rilling 使用的这种方法。</p>
+  </li>
+</ol>
+
+<p>将上面两种方法进行比较，得到下面这幅图</p>
+
+<p><img src="https://lh3.googleusercontent.com/-qJl5fKw60o8/UgY0P55hX5I/AAAAAAAABBw/x55p0wIhqyI/s912/3.jpg" alt="```spline```和```csape```插值效果比较" /></p>
+
+<p>我们可以发现，只有边界处出现细微差别，其他完全一样，如果调整<code>csape</code>的插值方法，可以得到完全一样的结果，所以使用哪种的效果是完全一样的。</p>
+
+<p>要注意我们用 MATLAB 做三次样条差值是为了寻找上下包络线，那么什么是包络线呢？维基上的解释是这样的</p>
+
+<blockquote>
+  <p>在几何学，某个曲线族的包络线（Envelope），是跟该曲线族的每条线都有至少一点相切的一条曲线。（曲线族即一些曲线的无穷集，它们有一些特定的关系。）</p>
+</blockquote>
+
+<p>不知道你看懂没有，反正我是没有看懂（囧）。但是我至少看懂了一点，包络线不能和曲线族相交们仅仅是相切，但是用局部极值点三次样条差值得到的包络线有的时候会出现与原信号相切的情况，<a href="http://blog.sina.com.cn/s/blog_6ad0d3de01016two.html">这里</a>提供了一种用切点求包络线的方法，但是据博主说，计算用时会大大增加，EMD 的计算用时本来就很长，如果再让求包络线拖慢时间我认为并不值得，况且出现相切的状况只在局部斜率变化缓慢时出现，脑电上很少出现这种状况，所以我认为用极值点插值已经足够了。</p>
+
+<p>然后是是否使用更高次的插值方式，很多论文中提到使用更高次的插值方式使得到的包络线更加平滑，但是我认为完全没有必要，三次样条插值已经足以满足平滑上的需求，而且我们将来使用的也只不过是插值的到的取样点，过好的平滑反而有可能会被取样点的疏松掩盖掉，三次样条差值足以。</p>
+
+<p>（未完待续）</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[银行机按键声音]]></title>
+    <link href="http://pikipity.github.com/blog/yin-xing-ji-an-jian-sheng-yin.html"/>
+    <updated>2013-07-23T08:40:00+08:00</updated>
+    <id>http://pikipity.github.com/blog/yin-xing-ji-an-jian-sheng-yin</id>
+    <content type="html"><![CDATA[<p>这件事的起因是和女朋友争辩银行机的按键声音是否一样，我认为，既然电话的声音都是由两个频率决定，每个按键声音不一样来提示用户按对按键，那么银行机也应该是这样了，而女朋友认为银行机按键为了保密所有按键应该是一样的，争辩不出结果于是决定做实验，于是跑到东亚9楼的ATM取款机用手机录制了下面的4段音频（没找到提供音乐外链的网网站，只能压缩之后用“百度盘”了）：</p>
+
+<p><a href="http://pan.baidu.com/share/link?shareid=2248957344&amp;uk=4080321956">录制的音频文件和处理得到的音频时域和频域图像</a></p>
+
+<p>好，现在开始处理。我认为只要能用 Matlab 对按键声音做 FFT，看按键声音频率是否一样就可以了。拿其中的一段音频做例子，我是这样处理的。</p>
+
+<ol>
+  <li>原始音频文件竟然是<code>flac</code>格式的，无法导入 MATLAB，于是先将其用音频转换软件转换为了<code>wma</code>格式。（我用的是 <a href="http://tmkk.undo.jp/xld/index_e.html">XLD</a> 这个软件）</li>
+  <li>
+    <p>将音频导入 MATLAB，画出原始音频图像：</p>
+
+    <p><img src="https://lh6.googleusercontent.com/-WeOvo4LWCGI/Ue3Ux1O1z-I/AAAAAAAAA40/RPMbZolJC_8/s559/1.jpg" alt="原始音频" /></p>
+  </li>
+  <li>
+    <p>发现噪音还是比较明显的，于是用小波分析的函数<code>wden</code>去了一下噪，命令如下：</p>
+
+    <pre><code>xd=wden(x,'sqtwolog','s','mln',8,'db5');
+</code></pre>
+
+    <p>然后得到了下面的图像，并选取了两个时间点，准备截取一段按键声音做 FFT。</p>
+
+    <p><img src="https://lh3.googleusercontent.com/-rAYyay2qD3Q/Ue3Ux9tem9I/AAAAAAAAA48/CKNe_SHv8WY/s559/2.jpg" alt="去噪之后的图像" /></p>
+  </li>
+  <li>
+    <p>根据上面选取的时间点截取了一段按键声音后，对其做了一下 FFT（用我自己写的函数，比较方便，直接画出图像）。</p>
+
+    <pre><code>fft_plot(xd,fs,'plot');
+</code></pre>
+
+    <p>函数贴在这里：</p>
+
+    <pre><code>function [ frequency,fft_result ] = fft_plot( data,Fs,varargin )
+ % Calculate or plot directly fft results of data.
+ %
+ % [ frequency,fft_result ] = fft_plot( data,Fs,'plot' )
+ %
+ % inputs:
+ %   (1) data: data used to analysis
+ %   (2) Fs: sample frequency
+ %   (3) 'plot': veriable input. if there is not this input, fft results will be
+ %   ploted
+ % output:
+ %   (1) freqeuncy: frequency corresponding to the fft results
+ %   (2) fft_result: fft results
+	
+ if nargin&lt;2
+     error('data and Fs must be given');
+ elseif nargin==2
+     size_data=size(data);
+     if size_data(1)~=1 &amp;&amp; size_data(2)~=1
+         error('the length or the number of rows must be one.');
+     end
+     L=length(data);
+     NFFT=2^nextpow2(L);
+     fft_result=fft(data,NFFT);
+     frequency=Fs/2*linspace(0,1,NFFT/2+1);
+ elseif nargin==3
+         if strcmp(varargin,'plot')
+              size_data=size(data);
+             if size_data(1)~=1 &amp;&amp; size_data(2)~=1
+                 error('the length or the number of rows must be one.');
+             end
+             L=length(data);
+             NFFT=2^nextpow2(L);
+             fft_result=fft(data,NFFT);
+             frequency=Fs/2*linspace(0,1,NFFT/2+1);
+             figure;
+             plot(frequency,abs(fft_result(1:NFFT/2+1)));
+             title('FFT')
+             xlabel('Frequency')
+             ylabel('FFT results')
+         else
+             error('variable input must be ''plot''');
+         end
+ elseif nargin&gt;=3
+     error('Too much inputs')
+ end
+ end
+</code></pre>
+
+    <p>调整了一下，频率范围，得到了这样的频域图：</p>
+
+    <p><img src="https://lh4.googleusercontent.com/-diX6ehStf1o/Ue3UyPdKbCI/AAAAAAAAA5E/iSQUMnsy-NQ/s559/3.jpg" alt="频域图" /></p>
+
+    <p>很明显，大约在 511.4Hz，只有一个频率。看来是我错了，但是还有三段音频那，一起处理了吧。</p>
+
+    <p><img src="https://lh3.googleusercontent.com/-HYlrs_X6TAg/Ue3UybQgpGI/AAAAAAAAA5M/kpmInMrs-ss/s559/4.jpg" alt="竟然一模一样！！" /></p>
+
+    <p><img src="https://lh4.googleusercontent.com/-UAGj7_avc5g/Ue3UynLshpI/AAAAAAAAA5Q/J-6BKsI4m5g/s559/5.jpg" alt="那个小的是什么？看大小可以忽略了。。" /></p>
+
+    <p>好像还有一段音频忘处理了，算了吧，结论很明显了。</p>
+  </li>
+</ol>
+
+<p>经过上面的测试，很明显是我错了，ATM机按键声音都是一样的。之后又去 Google 上搜索了一下，看到了这些，囧。</p>
+
+<p><img src="https://lh3.googleusercontent.com/-J9-IpVrgM_g/Ue3anj5bDuI/AAAAAAAAA5g/RfH87ke-HCs/s512/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-07-23%2520%25E4%25B8%258A%25E5%258D%25889.18.51.png" alt="Google 上搜索相关信息。。。第一条是怎么回事？淘宝？" /></p>
+]]></content>
+  </entry>
+  
+</feed>
