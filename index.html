@@ -1,74 +1,1567 @@
-<!DOCTYPE html>
+
+<!DOCTYPE HTML>
 <html>
+<head>
+	<meta charset="utf-8">
+	<title>折腾来折腾去</title>
+	<meta name="author" content="pikipity">
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="In-family.github.io : " />
+	
+	<meta name="description" content="初音时钟 转载自猫牧場 如果您无法正常显示时钟，请下载 Adobe Flash Player About Me &#8211; pikipity pikipity 的小博客，搜罗最新最有意思的科技话题，展示自己的所知所学所感。 如果发现问题，请在文章后面留言指出或是直接点这里发邮件给我指正，谢谢 &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+	<link href="/atom.xml" rel="alternate" title="折腾来折腾去" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.ico" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
 
-    <title>In-family.github.io</title>
-  </head>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
 
-  <body>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/in-family">View on GitHub</a>
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
 
-          <h1 id="project_title">In-family.github.io</h1>
-          <h2 id="project_tagline"></h2>
+<body>
+	<header id="header" class="inner"><h1><a href="/">折腾来折腾去</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+	<li><a href="/project">Project</a></li>
+       <li><a href="/aboutme">AboutMe</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+	<li><a href="/project">Project</a></li>
+       <li><a href="/aboutme">AboutMe</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:pikipity.github.com">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		
+		<a class="weibo" href="http://weibo.com/pikipitywz" title="Weibo">Weibo</a>
+		
+		
+		<a class="github" href="https://github.com/pikipity" title="GitHub">GitHub</a>
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="http://feed.feedsky.com/rsqe" title="RSS">RSS</a>
+		
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:pikipity.github.com">
+	</form>
+</nav>
 
-        </header>
-    </div>
+</header>
+	
+		
+	
+	<div id="content" class="inner">
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+    <aside class="sidebar">
+      
+        <section>
+  <h1>初音时钟</h1>
+  <ul id="for_fun">
+  转载自<a href="http://nekokan.easter.ne.jp/flush/mikuclock.html">猫牧場</a>
+  <embed src="/mikuclock.swf" width="150" height="180"><br/>
+  如果您无法正常显示时钟，请下载 <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&ved=0CDMQFjAA&url=http%3A%2F%2Fget.adobe.com%2Fflashplayer%2F&ei=tdsyUa_FB6i9iAfiooGoBg&usg=AFQjCNFV-EC-o0osKJm2dFwEBoUMPY6T2g&sig2=JhnyQZkKEKmbC248ALP2Fw&bvm=bv.43148975,d.aGc">Adobe Flash Player</a>
+  </ul>
+</section><section>
+  <h1>About Me &#8211; pikipity</h1>
+  <ul id="post">
+  pikipity 的小博客，搜罗最新最有意思的科技话题，展示自己的所知所学所感。<p>
+  
+  <img src="/images/myface.gif" width="100pt"><p>
+  
+  如果发现问题，请在文章后面留言指出或是直接点<a href="mailto:pikipityw@gmail.com">这里</a>发邮件给我指正，谢谢。<p>
+  
+  pikipity Blog: <a href="http://pikipity.github.com/">pikipity.github.com</a>
+  pikipity Email: <a href="mailto:pikipityw@gmail.com">pikipityw.gmail.com</a>
+  
+  使用IE浏览器可能无法得到完美的浏览体验，建议更换为<a href="https://www.google.com/intl/en/chrome/browser/"> Chrome 浏览器</a><p>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+  </ul>
+</section>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<section>
+  <h1>Tag Cloud</h1>
+    <ul id="tags">
+    <span id="tag-cloud"><a href='/blog/categories/arduino' style='font-size: 106.0%'>Arduino(3)</a> <a href='/blog/categories/assembly' style='font-size: 114.0%'>Assembly(7)</a> <a href='/blog/categories/cartoon' style='font-size: 108.0%'>Cartoon(4)</a> <a href='/blog/categories/circuit' style='font-size: 106.0%'>Circuit(3)</a> <a href='/blog/categories/game' style='font-size: 116.0%'>Game(8)</a> <a href='/blog/categories/github' style='font-size: 106.0%'>Github(3)</a> <a href='/blog/categories/google' style='font-size: 134.0%'>Google(17)</a> <a href='/blog/categories/ios' style='font-size: 108.0%'>IOS(4)</a> <a href='/blog/categories/life' style='font-size: 160.0%'>Life(30)</a> <a href='/blog/categories/linux' style='font-size: 114.0%'>Linux(7)</a> <a href='/blog/categories/mac' style='font-size: 126.0%'>Mac(13)</a> <a href='/blog/categories/matlab' style='font-size: 122.0%'>Matlab(11)</a> <a href='/blog/categories/movie' style='font-size: 108.0%'>Movie(4)</a> <a href='/blog/categories/octopress' style='font-size: 106.0%'>Octopress(3)</a> <a href='/blog/categories/others' style='font-size: 118.0%'>Others(9)</a> <a href='/blog/categories/processing' style='font-size: 108.0%'>Processing(4)</a> <a href='/blog/categories/python' style='font-size: 112.0%'>Python(6)</a> <a href='/blog/categories/scm' style='font-size: 124.0%'>SCM(12)</a> <a href='/blog/categories/technology' style='font-size: 128.0%'>Technology(14)</a> </span>
+    <span id="tag-cloud"><embed type='application/x-shockwave-flash' src='/javascripts/tagcloud.swf'width='100%' height='250' bgcolor='#f2f2f2' id='tagcloudflash' name='tagcloudflash' quality='high' allowscriptaccess='always'flashvars="tcolor=0x333333&amp;tcolor2=0x333333&amp;hicolor=0x000000&amp;tspeed=100&amp;distr=true&amp;mode=tags&amp;tagcloud=%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fpikipity.github.com%2Fblog%2Fcategories%2Farduino%27+style%3D%27font-size%3A+14.0%25%27%3EArduino%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fpikipity.github.com%2Fblog%2Fcategories%2Fassembly%27+style%3D%27font-size%3A+19.333333333333336%25%27%3EAssembly%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fpikipity.github.com%2Fblog%2Fcategories%2Fcartoon%27+style%3D%27font-size%3A+15.333333333333332%25%27%3ECartoon%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fpikipity.github.com%2Fblog%2Fcategories%2Fcircuit%27+style%3D%27font-size%3A+14.0%25%27%3ECircuit%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fpikipity.github.com%2Fblog%2Fcategories%2Fgame%27+style%3D%27font-size%3A+20.666666666666664%25%27%3EGame%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fpikipity.github.com%2Fblog%2Fcategories%2Fgithub%27+style%3D%27font-size%3A+14.0%25%27%3EGithub%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fpikipity.github.com%2Fblog%2Fcategories%2Fgoogle%27+style%3D%27font-size%3A+32.66666666666667%25%27%3EGoogle%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fpikipity.github.com%2Fblog%2Fcategories%2Fios%27+style%3D%27font-size%3A+15.333333333333332%25%27%3EIOS%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fpikipity.github.com%2Fblog%2Fcategories%2Flife%27+style%3D%27font-size%3A+50.0%25%27%3ELife%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fpikipity.github.com%2Fblog%2Fcategories%2Flinux%27+style%3D%27font-size%3A+19.333333333333336%25%27%3ELinux%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fpikipity.github.com%2Fblog%2Fcategories%2Fmac%27+style%3D%27font-size%3A+27.333333333333332%25%27%3EMac%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fpikipity.github.com%2Fblog%2Fcategories%2Fmatlab%27+style%3D%27font-size%3A+24.666666666666664%25%27%3EMatlab%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fpikipity.github.com%2Fblog%2Fcategories%2Fmovie%27+style%3D%27font-size%3A+15.333333333333332%25%27%3EMovie%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fpikipity.github.com%2Fblog%2Fcategories%2Foctopress%27+style%3D%27font-size%3A+14.0%25%27%3EOctopress%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fpikipity.github.com%2Fblog%2Fcategories%2Fothers%27+style%3D%27font-size%3A+22.0%25%27%3EOthers%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fpikipity.github.com%2Fblog%2Fcategories%2Fprocessing%27+style%3D%27font-size%3A+15.333333333333332%25%27%3EProcessing%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fpikipity.github.com%2Fblog%2Fcategories%2Fpython%27+style%3D%27font-size%3A+18.0%25%27%3EPython%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fpikipity.github.com%2Fblog%2Fcategories%2Fscm%27+style%3D%27font-size%3A+26.0%25%27%3ESCM%3C%2Fa%3E+%3Ca+href%3D%27http%3A%2F%2Fpikipity.github.com%2Fblog%2Fcategories%2Ftechnology%27+style%3D%27font-size%3A+28.666666666666668%25%27%3ETechnology%3C%2Fa%3E+%3C%2Ftags%3E"></span>
+    如果您无法正常显示云标签，请下载 <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&ved=0CDMQFjAA&url=http%3A%2F%2Fget.adobe.com%2Fflashplayer%2F&ei=tdsyUa_FB6i9iAfiooGoBg&usg=AFQjCNFV-EC-o0osKJm2dFwEBoUMPY6T2g&sig2=JhnyQZkKEKmbC248ALP2Fw&bvm=bv.43148975,d.aGc">Adobe Flash Player</a>
+   </ul>
+</section>
+
+<section>
+  <h2>Recent Post</h2>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/ultrasonic-distance-measurement-using-arduino.html">利用 Arduino 进行超声波测距</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/arduino-dht11-lcd1602.html">用 Arduino 测量温度和湿度</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/introduction-to-terraria.html">让我们一起来征服世界</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/processing-prectice-3d-dice.html">processing 练习作 &#8211; 3D 色子</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/introduction-uncyclopedia.html">一本正经的恶搞 &#8211; 伪基百科</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+<h2>RSS Feed</h2>
+<ul id="RSS_feed">
+<!-- Feedsky FEED发布代码开始 -->
+<!-- FEED自动发现标记开始 -->
+<link title="RSS 2.0" type="application/rss+xml" href="http://feed.feedsky.com/rsqe" rel="alternate" />
+<!-- FEED自动发现标记结束 -->
+<a href="http://www.zhuaxia.com/add_channel.php?url=http://feed.feedsky.com/rsqe" target="_blank"><img border="0" src="http://img.feedsky.com/images/icon_subshot01_zhuaxia.gif" alt="&#25235;&#34430;" vspace="2" style="margin-bottom:3px" ></a><a href="http://fusion.google.com/add?feedurl=http://feed.feedsky.com/rsqe" target="_blank"><img border="0" src="http://img.feedsky.com/images/icon_subshot01_google.gif" alt="google reader" vspace="2" style="margin-bottom:3px" ></a><br>
+<a href="http://add.my.yahoo.com/rss?url=http://feed.feedsky.com/rsqe" target="_blank"><img border="0" src="http://img.feedsky.com/images/icon_subshot01_yahoo.gif" alt="my yahoo" vspace="2" style="margin-bottom:3px" ></a><a href="http://inezha.com/add?url=http://feed.feedsky.com/rsqe" target="_blank"><img border="0" src="http://img.feedsky.com/images/icon_subshot01_nazha.gif" alt="&#21738;&#21522;" vspace="2" style="margin-bottom:3px" ></a><br>
+<a href="http://reader.youdao.com/b.do?keyfrom=feedsky&url=http://feed.feedsky.com/rsqe" target="_blank"><img border="0" src="http://img.feedsky.com/images/icon_subshot01_youdao.gif" alt="&#26377;&#36947;" vspace="2" style="margin-bottom:3px" ></a><a href="http://mail.qq.com/cgi-bin/feed?u=http://feed.feedsky.com/rsqe" target="_blank"><img border="0" src="http://img.feedsky.com/images/icon_subshot01_qq.gif" alt="QQ&#37038;&#31665;" vspace="2" style="margin-bottom:3px" ></a><br>
+<!-- Feedsky FEED发布代码结束 -->
+</ul>
+</section><section>
+<h1>Copyright Agreement</h1>
+<ul id="copyright">
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br />本网站作品，非特别声明，皆为原创。本网站所有原创作品均采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh">知识共享署名-非商业性使用-相同方式共享 3.0 未本地化版本许可协议</a>进行许可。
+</ul>
+</section><!DOCTYPE html>
+<section>
+<h1>For Fun</h1>
+<ul id="for_fun">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta description="runjs.cn 首发，求好看的 CSS">
+	<meta description="信则有，不信则无，总之作者不会对该程序生成的内容负任何责任。">
+	<meta description="虽然在微博发现冒充原作者的账号，但不想打击大家 fork 的热情，所以页面上不会有任何关于作者的声明。">
+	<meta author="twitter: @fake_faith, G+: Yiding He">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>
+		程序员求签
+	</title>
+	<script id="jquery_183" type="text/javascript" class="library"
+	src="http://sandbox.runjs.cn/js/sandbox/jquery/jquery-1.8.3.min.js">
+	</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="title">
+        程序员求签
+				<sup>
+					beta
+				</sup>
+		<br />
+		源码来自<a href="http://runjs.cn/">RunJS</a>的<a href="http://runjs.cn/detail/yu9cs4i4">程序员求签</a>
+		</div>
+		<div class="info">
+			<strong>求</strong>婚丧嫁娶亲友疾病编程测试升职跳槽陨石核弹各类吉凶
+		</div>
+		<div class="date_for_fun">
+		</div>
+		<div class="check_luck">
+			<ul style="margin-top:0;padding-left:30px;line-height:130%">
+				<li>编码测试修复提交之前求一签，可避凶趋吉</li>
+				<li>选择所求之事并在心中默念，再单击“求”即可</li>
+				<li>同一件事只能求一次，下次再求需刷新页面</li>
+			</ul>
+			<table class="event_table selecttable">
+				<tr>
+					<td class="" data-event="100">
+						编码
+					</td>
+					<td class="" data-event="200">
+						测试
+					</td>
+					<td class="" data-event="300">
+						修复BUG
+					</td>
+					<td class="" data-event="400">
+						提交代码
+					</td>
+					<td class="" data-event="500">
+						其他
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="roll">
+			<div class="card" style="top:-1px;font-size:20pt">
+				请点击所求之事
+			</div>
+			<div class="card clickable">
+				求
+			</div>
+		</div>
+			
+	</div>
+
+<style>
+
+
+
+.container {
+	width: 210px;
+	margin: 0 auto 50px;
+}
+
+.info {
+	text-align: center;
+	color: #dc143c;
+	font-size: 9pt;
+}
+
+.info strong {
+	background:crimson;
+	color: white;
+	padding:0 3px;
+	margin: 0 1px;
+}
+
+.container>.title {
+	color: #bbb;
+	font-weight: bold;
+	margin-bottom: 10px;
+	background: #555;
+	padding: 5px 15px;
+	font-size: 120%;
+}
+
+.date_for_fun {
+	font-size: 16pt;
+	font-weight: bold;
+	line-height: 30pt;
+	text-align: center;
+	border-bottom: 1px solid #999;
+}
+
+.check_luck {
+	padding-top: 10px;
+}
+
+.selecttable {
+	width: 100%;
+}
+
+.selecttable td {
+	text-align: center;
+	padding: 10px 0;
+	margin: 1px;
+	background: #ccc;
+	cursor: pointer;
+	width: 20%;
+	border-radius:2px;
+}
+
+.selecttable td:hover {
+	background: #aaa;
+}
+
+.selecttable td.selected {
+	background: #333;
+	color: #fff;
+}
+
+.roll {
+	height: 200px;
+	border:1px solid #faa;
+	margin-top:10px;
+	overflow: hidden;
+	position: relative;
+}
+
+.card {
+	background:#ffffff;
+	font-size: 70pt;
+	font-weight: bold;
+	text-align: center;
+	line-height: 200px;
+	border-top: 1px solid #faa;
+	position: absolute;
+	top: 201px;
+	width: 100%;
+}
+
+.card.clickable {
+	background: crimson;
+	color: #ffffff;
+	cursor: pointer;
+}</style>
+
+<script>
+
+//
+/*
+ * 注意：本程序中的“随机”都是伪随机概念。
+ * 第一个种子相对固定，第二个种子相对有更多变化
+ */
+function random(seed1, seed2) {
+	var n = seed1 % 11117;
+	for (var i = 0; i < 100 + seed2; i++) {
+		n = n * n;
+		n = n % 11117; // 11117 是个质数
+	}
+	return n;
+}
+
+// 从数组中随机挑选 size 个
+function pickRandom(array, size) {
+	var result = [];
+
+	for (var i = 0; i < array.length; i++) {
+		result.push(array[i]);
+	}
+
+	for (var j = 0; j < array.length - size; j++) {
+		var index = random(iday, j) % result.length;
+		result.splice(index, 1);
+	}
+
+	return result;
+}
+
+var weeks = ["日", "一", "二", "三", "四", "五", "六"];
+function getTodayString() {
+	return "今天是" + today.getFullYear() + "年" + (today.getMonth() + 1) + "月" + today.getDate() + "日 星期" + weeks[today.getDay()];
+}
+
+var today = new Date();
+var timeseed = today.getMilliseconds();
+
+/////////////////////////////////////////////////////////
+
+var results = ['超大吉', '大吉', '吉', '小吉', '未知', '小胸', '胸', '大胸', '超大胸'];
+var luck_rate = [10, 100, 500, 800, 300, 800, 500, 100, 10]; // 吉凶概率分布，总数为 3120
+
+var descriptions = {
+	100: ['写起代码来如游戏达人打通关一般痛快', '“代码本来就在那里，我不过是把它们写出来罢了。”', '单元测试可以一次通过，如果有单元测试的话。', '正确的划分逻辑，将保持你的思路清晰。', '不会出什么大问题。', '', '', '', ''],
+	200: ['', '', '', '', '', '', '', '', ''],
+	300: ['', '', '', '', '', '', '', '', ''],
+	400: ['', '', '', '', '', '', '', '', ''],
+	500: ['', '', '', '', '', '', '', '', '']
+};
+
+function pickRandomWithRate(seed1, seed2) {
+	var result = random(seed1, seed2) % 3120;
+	var addup = 0;
+	
+	for (var i = 0; i < luck_rate.length; i++) {
+		addup += luck_rate[i];
+		if (result <= addup) {
+			return results[i];
+		}
+	}
+	return ' ';
+}
+
+/////////////////////////////////////////////////////////
+var selectedEvent = null;
+
+function initEventTable() {
+	$('.event_table td').click(function() {
+		$('.event_table td').removeClass('selected');
+		$(this).addClass('selected'); 
+		selectedEvent = $(this).data('event');
+		
+		$('div.card.clickable').nextAll().remove();
+		showCard('div.card.clickable', 300);
+	});
+}
+
+// TODO 概率分布
+function getNextCardText() {
+	return pickRandomWithRate(timeseed + selectedEvent, slidecount);
+}
+
+function showCard(selector, duration, complete) {
+	$(selector).animate({top:'-1px'}, duration, 'swing', complete);
+}
+
+var tail, slidecount = 0;
+
+function initClickEvent() {
+	$('div.card.clickable').click(function() {
+		tail = $('div.card.clickable');
+		slidecount = 0;
+		slide();
+	});
+}
+
+function slide() {
+	if (slidecount > 35) {
+		return;
+	}
+	
+	var duration = slidecount > 32? 800: 
+			(slidecount > 25? 400: 
+			 (slidecount > 20? 200: 
+				(slidecount > 15? 150: 100)));
+	card = $('<div class="card">' + getNextCardText() +'</div>');
+	tail.after(card);
+	tail = card;
+	slidecount++;
+	showCard(card, duration, slide);
+}
+
+$(function() {
+	$('.date_for_fun').html(getTodayString());
+	initEventTable();
+	initClickEvent();
+});</script>
+
+	</body>
+</ul>
+</section><section>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta description="runjs.cn 首发，求好看的 CSS">
+		<meta description="信则有，不信则无，总之作者不会对该程序生成的内容负任何责任。">
+		<meta description="虽然在微博发现冒充原作者的账号，但不想打击大家 fork 的热情，所以页面上不会有任何关于作者的声明。">
+		<meta author="twitter: @fake_faith, G+: Yiding He">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>程序员老黄历</title>
+	<script id="jquery_183" type="text/javascript" class="library" src="/js/sandbox/jquery/jquery-1.8.3.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="title">
+				程序员老黄历<sup>beta</sup>
+				<br />
+				源码来自<a href="http://runjs.cn/">RunJS</a>的<a href="http://sandbox.runjs.cn/show/ydp3it7b">程序员老黄历</a>
+			</div>
+			<div class="date_for_fun_2">
+			</div>
+			<div class="good">
+				<div class="title">
+					<table>
+						<tr><td>宜</td></tr>
+					</table>
+				</div>
+				<div class="content">
+					<ul></ul>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="split"></div>
+			<div class="bad">
+				<div class="title">
+					<table>
+						<tr><td>不宜</td></tr>
+					</table>
+				</div>
+				<div class="content">
+					<ul></ul>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="split"></div>
+			<div class="line-tip">
+				<strong>座位朝向：</strong>面向<span class="direction_value"></span>写程序，BUG 最少。
+			</div>
+			<div class="line-tip">
+				<strong>今日宜饮：</strong><span class="drink_value"></span>
+			</div>
+			<div class="line-tip">
+				<strong>女神亲近指数：</strong><span class="goddes_value">
+			</div>
+			
+			<div class="comment">
+				
+					<li>本老黄历尚处于beta阶段，作者随时会修改，所以如果上午看到的内容跟下午不同，请勿惊慌；</li>
+					<li>本老黄历仅面向程序员；</li>
+					<li>本老黄历内容是程序生成的，因为只有这样程序员才会信。</li>
+				
+			</div>
+		</div>
+	
+
+    	<style>
+
+.container {
+	width: 210px;
+	margin: 0 auto 50px;
+}
+
+.container>.title {
+	color: #bbb;
+	font-weight: bold;
+	margin-bottom: 10px;
+	background: #555;
+	padding: 5px 15px;
+}
+
+.date_for_fun_2{
+	font-size:16pt;
+	font-weight: bold;
+	line-height: 30pt;
+	text-align: center;
+}
+
+.split, .clear {
+	clear: both;
+	height: 1px;
+	overflow-y: hidden;
+}
+
+.good, .bad {
+	clear: both;
+	position: relative;
+}
+
+.bad {
+	/*top: -1px;*/
+}
+
+.good .title, .bad .title {
+	float: left;
+	width: 100px;
+	font-weight: bold;
+	text-align: center;
+	font-size: 30pt;
+	position:absolute;
+	top:0;
+	bottom:0;
+}
+
+.good .title>table, .bad .title>table {
+	position:absolute;
+	width:100%;
+	height:100%;
+	border:none;
+}
+
+.good .title {
+	background: #ffee44;
+}
+
+.bad .title {
+	background: #ff4444;
+	color: #fff;
+}
+
+.good .content, .bad .content {
+	margin-left: 115px;
+	padding-right: 10px;
+	padding-top: 1px;
+	font-size:15pt;
+}
+
+.good {
+	background: #ffffaa;
+}
+
+.bad {
+	background: #ffddd3;
+}
+
+.content ul {
+	list-style: none;
+	margin:10px 0 0;
+	padding:0;
+}
+
+.content ul li {
+	line-height:150%;
+	font-size: 15pt;
+	font-weight: bold;
+	color: #444;
+}
+
+.content ul li div.description {
+	font-size: 10pt;
+	font-weight: normal;
+	color: #777;
+	line-height: 110%;
+	margin-bottom: 10px;
+}
+
+.line-tip {
+	font-size: 11pt;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.direction_value {
+	color:#4a4;
+	font-weight: bold;
+}
+
+.comment {
+	margin-top: 50px;
+	font-size: 11pt;
+	margin-left: 10px;
+}
+
+.comment ul {
+	margin-left: 0;
+	padding-left: 20px;
+	color: #999;
+}</style>
+	    		<script>//
+
+/*
+ * 注意：本程序中的“随机”都是伪随机概念，以当前的天为种子。
+ */
+function random(dayseed, indexseed) {
+	var n = dayseed % 11117;
+	for (var i = 0; i < 100 + indexseed; i++) {
+		n = n * n;
+		n = n % 11117;   // 11117 是个质数
+	}
+	return n;
+}
+
+var today = new Date();
+var iday = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
+
+var weeks = ["日","一","二","三","四","五","六"];
+var directions = ["北方","东北方","东方","东南方","南方","西南方","西方","西北方"];
+var activities = [
+	{name:"写单元测试", good:"写单元测试将减少出错",bad:"写单元测试会降低你的开发效率"},
+	{name:"洗澡", good:"你几天没洗澡了？",bad:"会把设计方面的灵感洗掉"},
+	{name:"锻炼一下身体", good:"",bad:"能量没消耗多少，吃得却更多"},
+	{name:"抽烟", good:"抽烟有利于提神，增加思维敏捷",bad:"除非你活够了，死得早点没关系"},
+	{name:"白天上线", good:"今天白天上线是安全的",bad:"可能导致灾难性后果"},
+	{name:"重构", good:"代码质量得到提高",bad:"你很有可能会陷入泥潭"},
+	{name:"使用%t", good:"你看起来更有品位",bad:"别人会觉得你在装逼"},
+	{name:"跳槽", good:"该放手时就放手",bad:"鉴于当前的经济形势，你的下一份工作未必比现在强"},
+	{name:"招人", good:"你遇到千里马的可能性大大增加",bad:"你只会招到一两个混饭吃的外行"},
+	{name:"面试", good:"面试官今天心情很好",bad:"面试官不爽，会拿你出气"},
+	{name:"提交辞职申请", good:"公司找到了一个比你更能干更便宜的家伙，巴不得你赶快滚蛋",bad:"鉴于当前的经济形势，你的下一份工作未必比现在强"},
+	{name:"申请加薪", good:"老板今天心情很好",bad:"公司正在考虑裁员"},
+	{name:"晚上加班", good:"晚上是程序员精神最好的时候",bad:""},
+	{name:"在妹子面前吹牛", good:"改善你矮穷挫的形象",bad:"会被识破"},
+	{name:"撸管", good:"避免缓冲区溢出",bad:"小撸怡情，大撸伤身，强撸灰飞烟灭"},
+	{name:"浏览成人网站", good:"重拾对生活的信心",bad:"你会心神不宁"},
+	{name:"命名变量\"%v\"", good:"",bad:""},
+	{name:"写超过%l行的方法", good:"你的代码组织的很好，长一点没关系",bad:"你的代码将混乱不堪，你自己都看不懂"},
+	{name:"提交代码", good:"遇到冲突的几率是最低的",bad:"你遇到的一大堆冲突会让你觉得自己是不是时间穿越了"},
+	{name:"代码复审", good:"发现重要问题的几率大大增加",bad:"你什么问题都发现不了，白白浪费时间"},
+	{name:"开会", good:"写代码之余放松一下打个盹，有益健康",bad:"你会被扣屎盆子背黑锅"},
+	{name:"打DOTA", good:"你将有如神助",bad:"你会被虐的很惨"},
+	{name:"晚上上线", good:"晚上是程序员精神最好的时候",bad:"你白天已经筋疲力尽了"},
+	{name:"修复BUG", good:"你今天对BUG的嗅觉大大提高",bad:"新产生的BUG将比修复的更多"},
+	{name:"设计评审", good:"设计评审会议将变成头脑风暴",bad:"人人筋疲力尽，评审就这么过了"},
+	{name:"需求评审", good:"",bad:""},
+	{name:"上微博", good:"今天发生的事不能错过",bad:"会被老板看到"},
+	{name:"上AB站", good:"还需要理由吗？",bad:"会被老板看到"}
+];
+
+var specials = [
+	{date:20130221, type:'good', name:'防核演习', description:'万一哪个疯子丢颗核弹过来...'}
+];
+
+var tools = ["Eclipse写程序", "MSOffice写文档", "记事本写程序", "Windows8", "Linux", "MacOS", "IE", "Android设备", "iOS设备"];
+
+var varNames = ["jieguo", "huodong", "pay", "expire", "zhangdan", "every", "free", "i1", "a", "virtual", "ad", "spider", "mima", "pass", "ui"];
+
+var drinks = ["水","茶","红茶","绿茶","咖啡","奶茶","可乐","牛奶","豆奶","果汁","果味汽水","苏打水","运动饮料","酸奶","酒"];
+
+function getTodayString() {
+	return "今天是" + today.getFullYear() + "年" + (today.getMonth() + 1) + "月" + today.getDate() + "日 星期" + weeks[today.getDay()];
+}
+
+// 生成今日运势
+function pickTodaysLuck() {
+	var numGood = random(iday, 98) % 3 + 2;
+	var numBad = random(iday, 87) % 3 + 2;
+	var eventArr = pickRandomActivity(numGood + numBad);
+	
+	var specialSize = pickSpecials();
+	
+	for (var i = 0; i < numGood; i++) {
+		addToGood(eventArr[i]);
+	}
+	
+	for (var i = 0; i < numBad; i++) {
+		addToBad(eventArr[numGood + i]);
+	}
+	
+	
+}
+
+// 添加预定义事件
+function pickSpecials() {
+	var specialSize = [0,0];
+	
+	for (var i = 0; i < specials.length; i++) {
+		var special = specials[i];
+		
+		if (iday == special.date) {
+			if (special.type == 'good') {
+				specialSize[0]++;
+				addToGood({name: special.name, good: special.description});
+			} else {
+				specialSize[1]++;
+				addToBad({name: special.name, bad: special.description});
+			}
+		}
+	}
+	
+	return specialSize;
+}
+
+// 从 activities 中随机挑选 size 个
+function pickRandomActivity(size) {
+	var picked_events = pickRandom(activities, size);
+	
+	for (var i = 0; i < picked_events.length; i++) {
+		picked_events[i] = parse(picked_events[i]);
+	}
+	
+	return picked_events;
+}
+
+// 从数组中随机挑选 size 个
+function pickRandom(array, size) {
+	var result = [];
+	
+	for (var i = 0; i < array.length; i++) {
+		result.push(array[i]);
+	}
+	
+	for (var j = 0; j < array.length - size; j++) {
+		var index = random(iday, j) % result.length;
+		result.splice(index, 1);
+	}
+	
+	return result;
+}
+
+// 解析占位符并替换成随机内容
+function parse(event) {
+	var result = {name: event.name, good: event.good, bad: event.bad};  // clone
+	
+	if (result.name.indexOf('%v') != -1) {
+		result.name = result.name.replace('%v', varNames[random(iday, 12) % varNames.length]);
+	}
+	
+	if (result.name.indexOf('%t') != -1) {
+		result.name = result.name.replace('%t', tools[random(iday, 11) % tools.length]);
+	}
+	
+	if (result.name.indexOf('%l') != -1) {
+		result.name = result.name.replace('%l', (random(iday, 12) % 247 + 30).toString());
+	}
+	
+	return result;
+}
+
+// 添加到“宜”
+function addToGood(event) {
+	$('.good .content ul').append('<li><div class="name">' + event.name + '</div><div class="description">' + event.good + '</div></li>');
+}
+
+// 添加到“不宜”
+function addToBad(event) {
+	$('.bad .content ul').append('<li><div class="name">' + event.name + '</div><div class="description">' + event.bad + '</div></li>');
+}
+
+$(function(){
+	$('.date_for_fun_2').html(getTodayString());
+	$('.direction_value').html(directions[random(iday, 2) % directions.length]);
+	$('.drink_value').html(pickRandom(drinks,2).join());
+	$('.goddes_value').html(random(iday, 6) % 50 / 10.0);
+	pickTodaysLuck();
+});</script>
+</body>
+</section>
+	
+
+      
+    </aside>
+
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/ultrasonic-distance-measurement-using-arduino.html">
+		
+			利用 Arduino 进行超声波测距</a>
+	</h2>
+	<div class="meta">
+	       <div class="author" style="float:left;">
+  
+
+<span class="byline author vcard">Posted by <span class="fn">pikipity</span></span>
+&nbsp;</div>
+		<div class="date" style="float:left;">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-21T10:32:00+08:00" pubdate data-updated="true">2013年09月21日</time></div>
+		<div class="tags" style="float:left;">
+
+
+	<a class='category' href='/blog/categories/arduino/'>Arduino</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/ultrasonic-distance-measurement-using-arduino.html#com_target">Comments</a></span>
+		
+	</div>
+	<div class="entry-content" style="clear:both;">
+		<p>在<a href="http://pikipity.github.io/blog/arduino-dht11-lcd1602.html">昨天测量温度的装置</a>上又加上了 HC-SR04 来进行超声波测距，先利用 DHT11 测量温度，然后利用温度来计算出较为准确的声速（根据<a href="http://en.wikipedia.org/wiki/Relativistic_Euler_equations">相对论的欧拉方程</a>，声速（米每秒）=331+0.6*温度（摄氏度）），再利用 HC-SR04 测得的超声波来回的时间计算出距离，并在 LCD1602 上显示。</p>
+
+<p>HC-SR04 的使用非常简单，<a href="http://www.doc88.com/p-737494835063.html">这里有一份 HC-SR04 的中文手册</a>，首先向 Trig 引脚输入一个不小于10us的高电平，然后测量 Echo 引脚返回的高电平的时间 t，然后利用公式：距离=t*声速/2，就可以计算得到距离了。但是需要注意：</p>
+
+<ol>
+  <li>测量周期要在60ms以上，防止回声影响。</li>
+  <li>计算距离时单位要统一，利用<code>pulseIn()</code>函数返回的时间单位是“微秒”，测量结果单位一般是“厘米”，所以声速要从“米每秒”换算为“厘米每微秒”，也就是除以10000。</li>
+  <li>测量距离为2cm~400cm，太近的话会有盲区，太远的话由于返回信号太弱难以检测。</li>
+</ol>
+
+<p><a href="https://github.com/pikipity/Ultrasonic_distance_measurement_using_Arduino.git">程序可以到这里下载</a>，其中 “HC_SR04_Arduino” 文件夹中是一个 HC-SR04 的 Arduino 测试程序，“display_LCD1602” 文件夹中是这次的程序，”scheme” 文件夹中是电路图。</p>
+
+<p>程序中使用 “Time” 库来实现定时器中断的功能，<a href="http://srmonk.blogspot.com/2012/01/arduino-timer-library.html">“Time” 库可以在这里下载</a>，如果你觉得看英文比较烦得话，可以看<a href="http://yehnan.blogspot.com/2012/03/arduino.html">这里这个中文简易教程</a>。</p>
+
+<p>电路图：</p>
+
+<p><img src="https://lh5.googleusercontent.com/-2ggKDjtrfuY/Uj0D_AibosI/AAAAAAAABMw/4VVXk4M1NiY/s640/Breadboard_bb.png" alt="面包板连接图" /></p>
+
+<p><img src="https://lh3.googleusercontent.com/-P3TPBqNYi1E/Uj0D_AqZCmI/AAAAAAAABMs/KXupBqQvZj8/s576/Breadboard_schem.png" alt="电路图" /></p>
+
+<p>结果（LCD 上，第一行为湿度和温度，第二行为距离）：</p>
+
+<p><img src="https://lh5.googleusercontent.com/-lM53a5xTLsA/Uj0D_fkuoxI/AAAAAAAABM0/eefNICQs9Ys/s512/result.jpg" alt="结果" /></p>
+
+		
+		
+	</div>
+
+
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/arduino-dht11-lcd1602.html">
+		
+			用 Arduino 测量温度和湿度</a>
+	</h2>
+	<div class="meta">
+	       <div class="author" style="float:left;">
+  
+
+<span class="byline author vcard">Posted by <span class="fn">pikipity</span></span>
+&nbsp;</div>
+		<div class="date" style="float:left;">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-20T22:00:00+08:00" pubdate data-updated="true">2013年09月20日</time></div>
+		<div class="tags" style="float:left;">
+
+
+	<a class='category' href='/blog/categories/arduino/'>Arduino</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/arduino-dht11-lcd1602.html#com_target">Comments</a></span>
+		
+	</div>
+	<div class="entry-content" style="clear:both;">
+		<p>今天中秋放假闲在宿舍里，于是就用 Arduino 做了一个测量温度和湿度的小装置，使用 DHT11 测量温度和湿度，然后用 LCD1602 来显示。</p>
+
+<p><a href="http://wenku.baidu.com/view/bb12c7c7d5bbfd0a795673dd.html">这里有一个 DHT11 的简单介绍</a>，包括引脚的意义和解法还有一个 Arduino 的例程。DHT11 的使用还是很简单的，基本思路就是先发送给 DHT11 一个信号，将其激活，成功激活后，DHT11 会返回一个信号，之后 DHT11 就会连续发送40位的二进制数据，这40bits的数据包括湿度数值、温度数值和校检数值，其中湿度数值和温度数值都是16位的定点二进制小数（<a href="http://pikipity.github.io/blog/scm-principle-3.html">定点二进制小数在这里有介绍</a>），其中前8位为整数位，后8位为小数位，具体排列如下：</p>
+
+<pre><code>8位湿度整数位 8位湿度小数位 8位温度整数位 8位温度小数位 8位校检数值
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>DHT11 具体操作步骤如下：</p>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<ol>
+  <li>发送启动信号：拉低引脚至少18ms，拉高引脚20us到40us</li>
+  <li>检测 DHT11 的返回信号：如果可以检测到一个低信号80us，然后一个高信号80us，则启动成功，进入下一步开始接受数据，否则启动失败。</li>
+  <li>开始接受数据：低信号时等待下一位数据，高信号时计算高信号的宽度，如果是26us到28us，则此位为“0”，如果是70us，则此位为“1”，共40位。</li>
+</ol>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>使用 DHT11 要注意的是：</p>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<ol>
+  <li>湿度单位为“%RH”（<a href="http://zh.wikipedia.org/wiki/%E7%9B%B8%E5%B0%8D%E6%BF%95%E5%BA%A6">相对湿度</a>），温度单位为“℃”（摄氏度）。</li>
+  <li>它的精度并不高，湿度误差为±5%RH，温度为±2℃。</li>
+  <li>校检数值使用方法：如果湿度整数位加上温度整数位等于校检数值，那么传输无误，否则存在传输错误。</li>
+  <li>采样周期不得小于1秒钟</li>
+</ol>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>LCD1602 就简单很多了，直接使用 Arduino 自带的 “LiquidCrystal” 库就可以很轻松的进行控制了，库中所包含的函数、使用方法和例程可以到<a href="http://arduino.cc/en/Reference/LiquidCrystal">这里看 “LiquidCrystal” 官方说明文档</a>。</p>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<p>以下是我设计的电路：</p>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p><img src="https://lh6.googleusercontent.com/-lWe2CscmyLw/Ujv5p3ZbUgI/AAAAAAAABMM/0Dv91ak3_9o/s640/Breadboard_bb.png" alt="面包板连接图" /></p>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<p><img src="https://lh6.googleusercontent.com/-aX-NkrUuHvI/Ujv5piz0TnI/AAAAAAAABMQ/bdtvWYZfm1A/s720/Breadboard_schem.png" alt="电路连接图" /></p>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
+<p><a href="https://github.com/pikipity/Display_Temp_and_Humi_using_LCD1602.git">程序可以到这里下载</a>。其中 “DHT11_Arduino” 文件夹中是对 DHT11 的测试，用的是串口显示测量结果，“LCD_Arduino” 文件夹中是对 LCD1602 的测试，显示的 “hello World”，“display”  文件夹中是整个的代码，”Sketch” 中是电路图和结果图。</p>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+<p>最终结果如下：</p>
 
+<p><img src="https://lh5.googleusercontent.com/-z0G7fuWmDjs/Ujv5pwiav-I/AAAAAAAABMU/OTBrKNvVwxU/s640/result.jpg" alt="结果" /></p>
+
+		
+		
+	</div>
+
+
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/introduction-to-terraria.html">
+		
+			让我们一起来征服世界</a>
+	</h2>
+	<div class="meta">
+	       <div class="author" style="float:left;">
+  
+
+<span class="byline author vcard">Posted by <span class="fn">pikipity</span></span>
+&nbsp;</div>
+		<div class="date" style="float:left;">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-16T20:14:00+08:00" pubdate data-updated="true">2013年09月16日</time></div>
+		<div class="tags" style="float:left;">
+
+
+	<a class='category' href='/blog/categories/game/'>Game</a>, <a class='category' href='/blog/categories/mac/'>Mac</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/introduction-to-terraria.html#com_target">Comments</a></span>
+		
+	</div>
+	<div class="entry-content" style="clear:both;">
+		<p><img src="https://lh3.googleusercontent.com/-xBEV9XTEUq8/UjcIJFQTLzI/AAAAAAAABL0/MzrQc4KU-oU/s364/Logo.png" alt="Terraria" /></p>
+
+<p>今天推荐一款沙盒游戏 – <a href="http://www.terraria.org/">《Terraria》</a>。“沙盒游戏”是模拟游戏的一个分支，玩家在一个大世界下自由行动，通常没有明确的目标，玩家发挥想象自由创造，例如<a href="http://www.ali213.net/zt/spore/">《孢子》</a>、<a href="http://zh.wikipedia.org/wiki/%E4%BF%A0%E7%9B%9C%E7%8D%B5%E8%BB%8A%E6%89%8B%E7%B3%BB%E5%88%97">《侠盗猎车手》</a>、<a href="https://minecraft.net/">《minecraft》</a>都属于沙盒游戏，其中<a href="https://minecraft.net/">《minecraft》</a>的超高的自由度现在应该是无人不知无人不晓了。</p>
+
+<p>如果你知道 <a href="https://minecraft.net/">《minecraft》</a> 的话，<a href="http://www.terraria.org/">《Terraria》</a> 可以理解为 2D 的<a href="https://minecraft.net/">《minecraft》</a>，但是绝对不是等同，从资源到怪物都完全不同，故事背景就更是一点关系都没有了，唯一相同的就是极高的自由度和挖矿的重要性。如果你连 <a href="https://minecraft.net/">《minecraft》</a> 都不知道的话，看一看下面这个视频，如果你觉得发挥想象挖掘世界、创造物品挺有趣的话，那么我就及其推荐你玩一玩这款游戏，你可以充分享受自己发现世界、创造文明的乐趣。当然和 <a href="https://minecraft.net/">《minecraft》</a> 一样，可以联机和小伙伴们一起进行世界探索。</p>
+
+<embed height="452" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="http://static.hdslb.com/miniloader.swf" flashvars="aid=127992&amp;page=1" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" />
+
+<p>缺点也和 <a href="https://minecraft.net/">《minecraft》</a> 一样，新人入手比较困难，由于完全没有新手指南（NPC 新手向导除了会告诉你配方外还会告诉你一些小贴士，但是等你听完他的小贴士早就黑天了，然后僵尸来了，然后。。。就没然后了），新手可以到<a href="http://www.mcbbs.net/thread-4917-1-1.html">这里</a>看一看，至少可以帮助平安度过第一夜，然后就是你自由的探索了，等你遇到瓶颈的时候，可以到<a href="http://tieba.baidu.com/f?kw=terraria">贴吧</a>看一看，会很有启发的。当你将原版玩到腻了，就可以尝试打各种各样的 MOD，换种玩法继续玩。总之，这是一款一旦入手就不想放手的游戏。</p>
+
+<ul>
+  <li>Windows 用户<a href="http://tieba.baidu.com/p/2591750651">这里</a>下载（注意看安装说明，需要安装一些其他的东西）。</li>
+  <li>Windows 上的有钱人可以到 <a href="http://store.steampowered.com/app/105600/">Steam</a> 上购买，联机什么的就不是问题了。</li>
+  <li>Mac OS X 用户<a href="http://pan.baidu.com/share/link?shareid=1013474534&amp;uk=4080321956">这里</a>下载（原始的 dmg 找不到了就把自己的 app 压缩了一下传上来了，可能连自己的人物和世界一起打包了，将就着用吧，无法联机，需要联机的请用 <a href="http://pikipity.github.io/blog/wine.html">Wine</a>）。</li>
+  <li>IOS 用户可以到<a href="https://itunes.apple.com/us/app/id640364616?mt=8">这里</a>下载</li>
+  <li>Andriod 用户可以到<a href="https://play.google.com/store/apps/details?id=com.and.games505.Terraria">这里</a>下载</li>
+</ul>
+
+
+		
+		
+	</div>
+
+
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/processing-prectice-3d-dice.html">
+		
+			Processing 练习作 &#8211; 3D 色子</a>
+	</h2>
+	<div class="meta">
+	       <div class="author" style="float:left;">
+  
+
+<span class="byline author vcard">Posted by <span class="fn">pikipity</span></span>
+&nbsp;</div>
+		<div class="date" style="float:left;">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-12T00:24:00+08:00" pubdate data-updated="true">2013年09月12日</time></div>
+		<div class="tags" style="float:left;">
+
+
+	<a class='category' href='/blog/categories/processing/'>Processing</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/processing-prectice-3d-dice.html#com_target">Comments</a></span>
+		
+	</div>
+	<div class="entry-content" style="clear:both;">
+		<p>processing 的练习作 – 3D 色子，旨在练习 processing 的 3D 效果制作。点击鼠标可以抛掷色子。色子的图案没有使用额外的图片，全部使用 processing 直接绘制。源代码在<a href="https://github.com/pikipity/3D_Dice.git">这里</a>。由于不是专注于正方体自由旋转落体的模拟，左移在色子的运动上做的很简单：上升和下落都是一个匀加速直线运动，每次落地撞击损失一半的速度；旋转方面每次根据坐标轴随机选取一个旋转方向，旋转速度和位移成正比；没有考虑触地之后的运动。</p>
+
+<p><img src="https://lh4.googleusercontent.com/-Qzgu5jWc-zY/UjCcf32YpqI/AAAAAAAABI4/myK3RPH83x8/s512/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-09-12%2520%25E4%25B8%258A%25E5%258D%258812.33.52.png" alt="程序截图" /></p>
+
+		
+		
+	</div>
+
+
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/introduction-uncyclopedia.html">
+		
+			一本正经的恶搞 &#8211; 伪基百科</a>
+	</h2>
+	<div class="meta">
+	       <div class="author" style="float:left;">
+  
+
+<span class="byline author vcard">Posted by <span class="fn">pikipity</span></span>
+&nbsp;</div>
+		<div class="date" style="float:left;">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-10T04:33:00+08:00" pubdate data-updated="true">2013年09月10日</time></div>
+		<div class="tags" style="float:left;">
+
+
+	<a class='category' href='/blog/categories/life/'>Life</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/introduction-uncyclopedia.html#com_target">Comments</a></span>
+		
+	</div>
+	<div class="entry-content" style="clear:both;">
+		<p><img src="https://lh5.googleusercontent.com/-Ths-brV6Q7E/Ui4wdOPGFsI/AAAAAAAABIo/Fed-Tb1wjr4/s152/Uncyclopedia_Logo_China_1.png" alt="适度恶搞，有益身心" /></p>
+
+<p>今天找资料的时候无意间发现了这样一个网站，里面全是无厘头的恶搞，看得我完全刹不住车了，不是没见过恶搞，但是像这样一本正经、诚意满满地恶搞还从来没有见过。这个网站就是 <a href="http://zh.uncyclopedia.info/wiki/%E9%A6%96%E9%A0%81">“伪基百科”</a>。页面从结构到文章形式完全仿照<a href="http://zh.wikipedia.org/">“维基百科”</a>，但是内容则没有一点是正经的，建议18岁以下儿童及身心脆弱者、极度爱党爱国人士不要点击进入。</p>
+
+<p><a href="http://zh.wikipedia.org/wiki/%E5%81%BD%E5%9F%BA%E7%99%BE%E7%A7%91">“维基百科”是这样介绍“伪基百科”的</a>：</p>
+
+<blockquote>
+  <p>伪基百科（英语：Uncyclopedia），是一个功能、操作方式与维基百科类似，但主要以恶搞为目的而创建的网站群。虽然号称是百科全书，但实际是一个试图以百科全书形式“搞笑”的网站。 </p>
+</blockquote>
+
+<p><a href="http://zh.uncyclopedia.info/wiki/%E7%B6%AD%E5%9F%BA%E7%99%BE%E7%A7%91">“伪基百科”是这样介绍“维基百科”的</a>：</p>
+
+<blockquote>
+  <p>維基百科（Wikipedia, the Evil and Useless Fucked-up Free Encyclopedia）是一個抄襲偽基百科架構的擺爛惡毒的垃圾網站，相同於偽基百科採用wiki(偽基)架構，亦堅持所有人皆可參與編輯其內容，在網站名稱上採用近似的發音。致使使用者在辨識上陷入重大錯誤，而不自知。</p>
+
+  <p>不僅內容不盡不實，而且資訊富含錯誤量驚人，致使知名如王爾德者亦無法接受！王爾德因理解維基百科在各種意義上實現唬爛與豪洨本質，憤而投靠偽基百科，並成為偽基之神。維基百科依據所謂的「維基倒亂法」，在一定意義上反轉事實與虛幻的傳統形上學認識，影響後世對實在界的真實理解，誤以虛構作品裡的事物代之，規定真實世界的一切都是人類意識內後天創造出來的假有概念，對人類近代史發展上，極大程度之負面影響。</p>
+
+  <p>相較於偽基百科唯一不同的是，維基百科堅持不有趣路線，所以比較多好人普遍接受這種不有趣，因而沉醉其中。基此諸多因素，維基百科出乎進步史觀上意料的發展成網路上最大的百科全書之一，與另外一個相較之下更形枯燥、味如嚼蠟，近一百年來號稱世界第一的大英百科全書編輯群氣得跳腳，潑婦罵街。維基百科亦因此諸多因素成為全世界第一個被罵是公廁的網站。
+基於被給予公廁的意義，維基百科從頭髮一直到腳趾開始武裝起來，進軍先進文明國家，嘗試以無聊KUSO的路線來同化偽基百科與大英百科全書，以各種可能的意義上欺騙大眾，進而實現愚民的目的性，雖然內容全是雜碎，但其數目確實令人望而快慰。
+在僅能保持被動的現有條件之下，防範維基百科大軍來襲，外型像一隻陽痿公雞的偽中華人民共和國的迷信馬克思的共匪創造了世界十七大奇境之一－－沒用的防火長城，亦無法阻擋維基百科的入侵，因為維基百科是一個被大陸共匪控制的垃圾百科。直至今日，因為太過枯燥乏味到快要沒命，沒有人要去維基百科，所以上帝便賦予了偽基百科的功能，試圖在知識的黑暗時代中開創一條可行的道路。</p>
+</blockquote>
+
+<p>读完上面的你是不是发现自己已经不认识“维基百科”了。 o(╯□╰)o</p>
+
+<p>友情提示：由于两者从网页链接到名称都极为相似，做作业的时候注意不要找错网站啊！囧</p>
+
+
+		
+		
+	</div>
+
+
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/light-controller.html">
+		
+			LED 亮度控制 &#8211; Processing 练习作</a>
+	</h2>
+	<div class="meta">
+	       <div class="author" style="float:left;">
+  
+
+<span class="byline author vcard">Posted by <span class="fn">pikipity</span></span>
+&nbsp;</div>
+		<div class="date" style="float:left;">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-08T20:52:00+08:00" pubdate data-updated="true">2013年09月08日</time></div>
+		<div class="tags" style="float:left;">
+
+
+	<a class='category' href='/blog/categories/arduino/'>Arduino</a>, <a class='category' href='/blog/categories/processing/'>Processing</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/light-controller.html#com_target">Comments</a></span>
+		
+	</div>
+	<div class="entry-content" style="clear:both;">
+		<p>又是一个自己制作的 processing 的练习作，旨在练习 processing 与 Arduino 的串口通信。使用 Processing 编写的可视化控制条，用户可以通过拉拽控制条来调整亮度的数值，通过串口将亮度输送给 Arduino，由 Arduino 实现 LED 灯亮度的调整。由于是很简单的控制，所以就没有考虑什么保护电阻之类的了，直接很简单将 LED 插在了开发板上。视频中就可以看出，当亮度 100% 的时候（也就是电压达到 5V 的时候），LED 会过亮，可能会损坏 LED。</p>
+
+<p>可以到<a href="https://github.com/pikipity/Light_Controller.git">这里</a>下载源码。</p>
+
+<p>程序截图：</p>
+
+<p><img src="https://lh6.googleusercontent.com/-IHYJhlfZPoc/UixyaVzcbYI/AAAAAAAABIM/jEakPgrxBqA/s800/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-09-08%2520%25E4%25B8%258B%25E5%258D%25888.03.49.png" alt="程序截图" /></p>
+
+<p>硬件连接：</p>
+
+<p><img src="https://lh6.googleusercontent.com/-agA7VbMa52g/UixyanVbgEI/AAAAAAAABIY/kfIqR_7uBRs/s640/%25E7%2585%25A7%25E7%2589%2587%252013-9-8%2520%25E4%25B8%258B%25E5%258D%25888%252001%252036.jpg" alt="硬件连接" /></p>
+
+<p>控制视频（没有任何处理直接传渣浪，果然画质惨不忍睹）：</p>
+
+<div><object id="ssss" width="480" height="370"><param name="allowScriptAccess" value="always" /><embed pluginspage="http://www.macromedia.com/go/getflashplayer" src="http://you.video.sina.com.cn/api/sinawebApi/outplayrefer.php/vid=114236415_3342829334_OBrgGio5CWXK+l1lHz2stqlF+6xCpv2xhGm3v1CsJwdaVgiYJMXNb9wG5CvVBstD9HoLHcwydP8i1R4rbKtd/s.swf" type="application/x-shockwave-flash" name="ssss" allowfullscreen="true" allowscriptaccess="always" width="480" height="370" /></object></div>
+
+		
+		
+	</div>
+
+
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/practice-for-processing.html">
+		
+			Processing 练习作 &#8211; 小画板</a>
+	</h2>
+	<div class="meta">
+	       <div class="author" style="float:left;">
+  
+
+<span class="byline author vcard">Posted by <span class="fn">pikipity</span></span>
+&nbsp;</div>
+		<div class="date" style="float:left;">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-05T16:57:00+08:00" pubdate data-updated="true">2013年09月05日</time></div>
+		<div class="tags" style="float:left;">
+
+
+	<a class='category' href='/blog/categories/processing/'>Processing</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/practice-for-processing.html#com_target">Comments</a></span>
+		
+	</div>
+	<div class="entry-content" style="clear:both;">
+		<p>在<a href="http://pikipity.github.io/blog/new-game-processing.html">这篇文章</a>中我简单介绍了用来编写视觉交互式软件的编程语言 <a href="https://processing.org/">processing</a>，这是我的一个练习作 – 一个简单的小画板，旨在练习 Processing 的基本命令和熟悉 Java 的语法。源代码可以到<a href="https://github.com/pikipity/Drawer.git">这里</a>下载。</p>
+
+<p>左侧选择工具，右侧选择画笔粗细和颜色。按”e”键结束当前工具输入（画直线、方框、圆形和不规则图形时有效）；按”r”键画布清零。</p>
+
+<p>截图：</p>
+
+<p><img src="https://lh6.googleusercontent.com/-CQpds8QLtt8/UihEwkBDmPI/AAAAAAAABH4/SeNgK7VRgr8/s640/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-09-05%2520%25E4%25B8%258B%25E5%258D%25884.43.37.png" alt="界面" /></p>
+
+<p>小问题：</p>
+
+<ol>
+  <li>没有保存功能。</li>
+  <li>颜色和画笔粗细比较单一。</li>
+  <li>在画直线、方框、圆形和不规则图形时没有预览功能，不方便。</li>
+</ol>
+
+<p>在编写过程中就会发现 processing 语言在功能上还是有一定的欠缺的，比如不能够抓取一部分界面进行重绘，换句话说就是没有“撤销”功能，但是如果仅仅想编写一个静态的交互界面已经绰绰有余了，无怪乎很多 Arduino 教学网站都推荐这个语言。</p>
+
+		
+		
+	</div>
+
+
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/heitongguge.html">
+		
+			听黑桐谷歌访谈有感</a>
+	</h2>
+	<div class="meta">
+	       <div class="author" style="float:left;">
+  
+
+<span class="byline author vcard">Posted by <span class="fn">pikipity</span></span>
+&nbsp;</div>
+		<div class="date" style="float:left;">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-29T09:33:00+08:00" pubdate data-updated="true">2013年08月29日</time></div>
+		<div class="tags" style="float:left;">
+
+</div>
+		
+			<span class="comments"><a href="/blog/heitongguge.html#com_target">Comments</a></span>
+		
+	</div>
+	<div class="entry-content" style="clear:both;">
+		<p>“黑桐谷歌”是出没于优酷和AB站的著名职业游戏解说，今天推荐的是他的一个访谈，访谈本身很业余（毕竟第一期，业余很正常），但是谷歌坦言的自己开始做游戏解说的历史和一路走来的心路历程才是视频的重点内容。</p>
+
+<embed height="452" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="http://static.hdslb.com/miniloader.swf" flashvars="aid=736273&amp;page=1" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" />
+
+<p>整个过程主要讲了两个话题（我私自将两个话题扩大化）：如何从默默无闻到一呼百应；中国非商业化活动的现状。</p>
+
+<h3 id="section">平民大神</h3>
+
+<p>当我看着视频，听着谷歌大大说着自己做游戏的过程和期间心中所想的时候，我不知不觉想起了以下几个人名（下面几个人都是公认的神级人物，但都离我们很遥远，但是谷歌大大，应该算是平民级的大神，更加贴近我们的生活实际，所以我在这里推荐他的访谈，而不是以下几个人的）：</p>
+
+<ul>
+  <li><a href="http://zh.wikipedia.org/wiki/%E7%90%86%E6%9F%A5%E5%BE%B7%C2%B7%E6%96%AF%E6%89%98%E6%9B%BC">理查德·斯托曼</a></li>
+  <li><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;sqi=2&amp;ved=0CCoQFjAA&amp;url=http%3A%2F%2Fzh.wikipedia.org%2Fzh-hant%2F%25E5%258F%25B2%25E8%2592%2582%25E5%25A4%25AB%25C2%25B7%25E4%25B9%2594%25E5%25B8%2583%25E6%2596%25AF&amp;ei=R6geUr-kBOfoiAerqYDYCA&amp;usg=AFQjCNFYNdQBHtLgy9nnA5gYJsQoZxglFA&amp;sig2=z8dPt-xkcLHR3B7jpygeFQ&amp;bvm=bv.51495398,d.aGc">史蒂夫·乔布斯</a></li>
+  <li><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;sqi=2&amp;ved=0CCoQFjAA&amp;url=http%3A%2F%2Fzh.wikipedia.org%2Fzh-hant%2F%25E6%25AF%2594%25E5%25B0%2594%25C2%25B7%25E7%259B%2596%25E8%258C%25A8&amp;ei=XageUoqlNuTkiAfbnYHYBA&amp;usg=AFQjCNFsmBBPY2jXjFNf4_80u3HXMJT5-g&amp;sig2=2l_1eW8YxA0Yrwy8oT5tfA&amp;bvm=bv.51495398,d.aGc">比尔·盖茨</a></li>
+</ul>
+
+<p>回顾它们的创业史，你会发现惊人的相似，它们都具备以下几点：</p>
+
+<ol>
+  <li>明确的目标：目标清晰明了，对于自己要做什么、最终结果怎么样，有很准确的定位。还有就是这个目标在自己心中分量必须足够沉重，沉重到即使整个世界都否定了你你还依然能够坚持下去。大多数人即使大学毕业往往还是不知道自己应该做些什么，就算有了目标，当别人否定的时候，也会自己对自己开始质疑，导致徘徊不定，错失良机。</li>
+  <li>强大的行动力：不让目标仅仅是个梦想，而是付出自己的努力和心血将其变为现实的行动力是不可或缺的。如果谷歌大大没有前期对市场的考察与研究，没有每个视频背后千百次对游戏的摸索，他也绝对不会像现在这样得到广大粉丝的认可。</li>
+  <li>创新力：必要的创新不可或缺，当然我这里所说的创新是对于一个区域甚至世界而言的创新，不是对于个人的创新。谷歌大大逐渐形成的解说风格和其拒绝商业化而采用捐献的方式都是他的创新。</li>
+</ol>
+
+<p>以上三点应该是我们每个人最缺乏但是却是成功不可或缺的素质，如果说，高中和上大学都是我们听从父母前辈的建议走的，那么接下来的路怎么走就要靠自己了，别人的经验永远带有个别独立性，别人只能提供方法，我们所能做的只能是借鉴吸收和学习而已。</p>
+
+<h3 id="section-1">中国式咬尾蛇怪圈</h3>
+
+<p>谷歌大大在视频中提到的那个中国游戏视频届的困境，其实也同样是中国开源软硬件的困境。中国人版权意识的淡薄、一味索取不愿付出的习惯必然会导致这样的困境：有的人因为爱好开始做视频（开源软硬件），慢慢地将其变为自己的职业，但为了生计，不得不开始利用自己的爱好寻求经济上的支援，无法得到的情况下只能走上商业化的道路，广告和收费让用户流失，最终放弃。</p>
+
+<p>谷歌大大这种自愿式捐款其实在国外非常常见，很多开源式的软硬件都是使用这种方式来支持自己的生活来实现维护项目的更新，但是在中国这种方式能否走得通还有待进一步的实验，毕竟中国人尤其是中国的电脑和互联网用户已经习惯了只为实体商品付费，而不愿为无形体的商品或是服务付费。这种现状非常不利于开源技术的进步，当所有的科技都被几个大型公司占领的时候，科技发展的速度和前景也就被限制住了，个人的创新也就被限制住了。</p>
+
+<p>但是这种现状的打破需要每个人一点一滴的努力才可以，谷歌大大在微博上放出捐款名单的做法我是很支持的，这种鼓励的方式可以看出还是很有效的。</p>
+
+<p>希望每个人对于这种因爱好而诞生的产物多贡献一点一起努力打破这种中国式怪圈。</p>
+
+<h3 id="section-2">最后</h3>
+
+<p>不要忘了加 <a href="http://weibo.com/pikipitywz">pikipity</a> 和 <a href="http://weibo.com/blackgoogle">黑桐谷歌</a> 的新浪微博呦。<a href="https://me.alipay.com/heitongguge">支持原创，一元也可，有你支持，由黑桐谷歌更新</a></p>
+
+<ul>
+  <li><a href="http://space.bilibili.tv/43536">黑桐谷歌 B 站卖萌大厅</a></li>
+  <li><a href="http://i.youku.com/u/id_UOTE2MDY5NDg=">黑桐谷歌优酷空间</a></li>
+  <li><a href="https://itunes.apple.com/cn/app/you-xi-shi-pin-jie-shuo/id660574550?mt=8">黑桐谷歌视频解说 IOS App</a></li>
+</ul>
+
+		
+		
+	</div>
+
+
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/new-game-processing.html">
+		
+			新玩具 &#8211; Processing</a>
+	</h2>
+	<div class="meta">
+	       <div class="author" style="float:left;">
+  
+
+<span class="byline author vcard">Posted by <span class="fn">pikipity</span></span>
+&nbsp;</div>
+		<div class="date" style="float:left;">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-28T12:37:00+08:00" pubdate data-updated="true">2013年08月28日</time></div>
+		<div class="tags" style="float:left;">
+
+
+	<a class='category' href='/blog/categories/processing/'>Processing</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/new-game-processing.html#com_target">Comments</a></span>
+		
+	</div>
+	<div class="entry-content" style="clear:both;">
+		<p><img src="https://lh5.googleusercontent.com/-YJlrgUSftcw/Uh2LCQCqpSI/AAAAAAAABHk/BrDYwd8hf_s/s180/180px-Processing_Logo_Clipped.svg.png" alt="Processing" /></p>
+
+<p>在看 Arduino 的资料的时候无意间找到了一个新玩具 – <a href="http://processing.org/">Processing</a>，专门用来开发视觉交互界面用的语言，基础语言是 Java，优点就和他官方网站介绍的一样：</p>
+
+<ul>
+  <li>开源，免费下载</li>
+  <li>支持多种输出方式，2D、3D 甚至 pdf</li>
+  <li>使用 OpenGL 作为 3D 的引擎</li>
+  <li>支持多种操作系统，Linux, OSX, Windows</li>
+  <li>网络上有众多的扩展库支持</li>
+  <li>大量的资料书籍（虽然都是英文的）</li>
+</ul>
+
+<p>我的第一反应是把它当做 Pygame 的替代品。相比 Pygame，Processing 的优点众多：</p>
+
+<ul>
+  <li>Java 语言本身的优点：Python 蛋疼的内存管理机制和速度问题现在让我越来越烦心了，Java 在这两点上要好得多。</li>
+  <li>
+    <p>安装方便：Pygame 毕竟是个民间自发的维护项目，更新缓慢，对于刚刚接触 Python 的新手来说安装的过程中就会遇到重重障碍。Processing 的安装则简单的多，而且更新迅速，各个平台的程序都已经打包好了，直接双击安装就可以了，而且自带 IDE（除了自动补全外其他你能想到的、没想到的功能都有了，界面也挺漂亮的），真的是扫除一切学习障碍，诚意满满。</p>
+
+    <p><img src="https://lh5.googleusercontent.com/-m44lymT_wQs/Uh2LCW7aRFI/AAAAAAAABHo/ONQpnwUPbig/s512/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-28%2520%25E4%25B8%258B%25E5%258D%25881.30.05.png" alt="自带 IDE 界面" /></p>
+  </li>
+  <li>语言更加人性化：Python 的语言已经很人性化了，而 Processing 的语言，尤其是默认变量的命名通过语意猜测就可以知道其代表什么了。命名方式也很统一（Python。。。谁用谁知道，我不吐槽了。）</li>
+  <li>事件管理更加轻松：相比 Pygame，Processing 简化了事件管理的部分。不再需要专门再编写代码来获得事件，在 Processing 中鼠标与键盘的事件都变成了一个个默认变量，直接使用这些默认变量就可以获得事件。</li>
+  <li>更多扩展库的支持：扩展库不仅数量多而且覆盖的范围很广，使得用 Processing 编写出来的视觉交互界面可以很容易的与其他硬件或软件进行交互，甚至很多特效都已经有库支持，只要直接调用就可以了，非常方便省力。</li>
+</ul>
+
+<p>当然，缺点也是有的，其并不适合编写游戏，毕竟此语言是为了开发交互式界面而发明的，对于游戏上的开发乏力还是可以理解的。</p>
+
+<p>总而言之，如果仅仅是想快速开发出一个简单的交互式界面，Processing 绝对是不二人选，但是要开发复杂的交互界面或者游戏的话，还是考虑直接用 Pygame 或是 更加基础的 C 或 C++ 吧。还有因为 Processing 的底层语言是 Java，所以对于我这种用惯了 Python 的人来说，换用 Java 是各种不习惯啊。。。（吐槽：为什么每一句后面都要加个分号啊，为什么还要大括号啊，为什么 for 循环这么麻烦啊。。。）</p>
+
+<p><a href="http://pan.baidu.com/share/link?shareid=1374351361&amp;uk=4080321956">入门教程推荐 – 《爱上 Processing》（专门用了讲解了如何将 Processing 与 Arduino 配合使用）</a></p>
+
+		
+		
+	</div>
+
+
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/youtube-dl-gui.html">
+		
+			Youtube-dl GUI</a>
+	</h2>
+	<div class="meta">
+	       <div class="author" style="float:left;">
+  
+
+<span class="byline author vcard">Posted by <span class="fn">pikipity</span></span>
+&nbsp;</div>
+		<div class="date" style="float:left;">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-25T15:47:00+08:00" pubdate data-updated="true">2013年08月25日</time></div>
+		<div class="tags" style="float:left;">
+
+
+	<a class='category' href='/blog/categories/mac/'>Mac</a>, <a class='category' href='/blog/categories/movie/'>Movie</a>, <a class='category' href='/blog/categories/python/'>Python</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/youtube-dl-gui.html#com_target">Comments</a></span>
+		
+	</div>
+	<div class="entry-content" style="clear:both;">
+		<p>经常在网上看到一些很好的视频想要保存下来，如果保存成书签的形式，每次打开都要重新加载一遍实在是太麻烦了，最好的当然是下载到电脑上，虽然自己找了许多在 Mac OS X 上下载视频的软件，但是其中的广告或是收费升级通知让我烦不胜烦。最后找到了这个软件 – <a href="http://rg3.github.io/youtube-dl/">youtube-dl</a>。用 Python 编写，本来是专门用于下载 YouTube 上的视频的，但是现在支持大部分的视频网站，经测试优酷和土豆都可以正常下载，唯一的缺点就是没有一个 GUI，每次都要打开终端输入一行代码，而且像我这种记忆渣每次都要查一遍它的参数列表，实在麻烦，但是又不忍放弃，于是决定自己为其写一个 GUI。</p>
+
+<p><a href="http://pikipity.github.io/youtube-dl-GUI/">这里是此 youtube-dl GUI 的项目主页</a>，安装及使用方法都可以找到。下面是软件截图，因为仅仅是为了使用方便，所以看上去和简陋，但是功能还是齐全的，下一步希望可以抽时间把 “Options” 做的更人性化一点。</p>
+
+<p><img src="https://lh3.googleusercontent.com/-rkDZUJACtqo/UhmniKahR7I/AAAAAAAABHM/iwtIZ9ZXXuo/s640/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-25%2520%25E4%25B8%258B%25E5%258D%25882.34.08.png" alt="下载中" /></p>
+
+<p><img src="https://lh3.googleusercontent.com/-ZNcrGbCx18M/UhmniTT8BYI/AAAAAAAABHQ/ig4RsA_k8OM/s640/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202013-08-25%2520%25E4%25B8%258B%25E5%258D%25882.34.31.png" alt="选择 Options" /></p>
+
+		
+		
+	</div>
+
+
+</article>
+
+
+<nav id="pagenavi">
     
+    
+        <a href="/blog/page/2/" class="next">Next</a>
+    
+    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
+</nav></div>
+	<footer id="footer" class="inner">Copyright &copy; 2013
 
-  </body>
+    pikipity
+
+
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-38118079-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+</body>
 </html>
