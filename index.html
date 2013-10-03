@@ -68,9 +68,9 @@ UD = {
             <div class="head_bg"></div>
         </div>
         <div class="content"></div>
-        <div class="footer">
+      <!--   <div class="footer">
             <div class="foot_bg"></div>
-        </div>
+        </div> -->
     </div>
 </div>
 <script type="text/javascript">
@@ -91,7 +91,7 @@ LoginPage = {
         };
         window.onload = function() {
             lp.resizeBackground();
-            lp.setLoginDivTop();
+            // lp.setLoginDivTop();
         };
 
         //check();
@@ -127,16 +127,16 @@ LoginPage = {
             bg_img.style.top = "";
         }
     },
-    setLoginDivTop: function() {
-        var dom_height = this.getClientHeight();
+    // setLoginDivTop: function() {
+    //     var dom_height = this.getClientHeight();
 
-        if (window.ActiveXObject && (navigator.userAgent.indexOf('MSIE 6.0') > -1) && dom_height < 600) {
-            $('lay').style.height = '600px';
-        } else {
-            $('lay').style.height = '';
-        }
+    //     if (window.ActiveXObject && (navigator.userAgent.indexOf('MSIE 6.0') > -1) && dom_height < 600) {
+    //         $('lay').style.height = '600px';
+    //     } else {
+    //         $('lay').style.height = '';
+    //     }
 
-    }, 
+    // }, 
     getById: function(id) {
         return document.getElementById(id);
     },
