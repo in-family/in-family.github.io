@@ -1,0 +1,99 @@
+/*
+CssName: style.css
+Description: yahei:\5fae\8f6f\96c5\9ed1, songti:\5b8b\4f53, heiti:\9ed1\4f53.
+Version: 20120422
+Author: shixujun
+*/
+
+/* =Reset
+----------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+body{font:12px "\5b8b\4f53", Arial, sans-serif;line-height:1.5;overflow: hidden;height: 100%;}
+html {
+height: 100%;
+margin: 0;
+padding: 0;
+overflow: hidden;}
+ol, ul{list-style: none;}
+table{border-collapse:collapse;border-spacing:0;}
+a{text-decoration:none;}
+
+/* =Structure
+----------------------------------------------- */
+.header{height:100px;width:980px;margin:0 auto;}
+.content{margin:10px 0;height:370px;overflow: hidden;}
+.footer{height:60px;text-align: center;width:980px;margin:0 auto;}
+
+
+/* =Global
+----------------------------------------------- */
+.dJ{clear:both;height:0;overflow:hidden;}
+.ir{overflow:hidden;text-indent:-9999px;}
+
+td,th,div{word-break:break-all;word-wrap:break-word}
+
+/* Default a link color */
+a:link{color:#0066cc;}
+a:visited{color:#743399;}
+a:active, a:hover{color:#ff4b33;}
+
+a:hover{text-decoration:underline;}
+a:focus{outline:none;}
+
+/* Default form color */
+/* input[type="text"],
+textarea {
+	background: #f9f9f9;
+	border: 1px solid #ccc;
+	box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	padding: 2px;
+} */
+
+/* =Sprites
+----------------------------------------------- */
+
+
+
+
+/* =Header
+----------------------------------------------- */
+.logo{width:200px;height:60px;background:url(../img/logo.png) no-repeat;float: left;margin:20px 0 0 30px;}
+.head_bg{width:980px;background: #000;filter:Alpha(opacity=60);-moz-opacity:.6;opacity:0.6;height:100px;}
+
+
+/* =Footer
+----------------------------------------------- */
+.copy{font-family: Arial;color:#fff;padding-top:30px;display: block;}
+.foot_bg{width:980px;background: #000;filter:Alpha(opacity=60);-moz-opacity:.6;opacity:0.6;height:60px;}
+
+
+
+/* =Structure
+----------------------------------------------- */
+
+.lay_background {
+position: absolute;
+left: 0;
+top: 0;
+z-index: -1;
+overflow: hidden;}
+.lay_background .lay_background_img {
+position: absolute;
+left: 0;
+top: 0;
+z-index: -1;}
+
